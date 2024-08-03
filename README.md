@@ -19,7 +19,7 @@ Experimental code for “Mixed precision HODLR matrices” [1]
 
 The results and figures are separately stored in ``results`` and ``figures``, respectively. 
 
-*All data are stored in folder ``data``, which are from [Amestoy et al.](https://gitlab.com/mgerest/mixedblr) [2] and SuiteSparse collection [4], and the low-precision arithmetic is simulated by chop [3]. *
+_All data are stored in folder ``data``, which are from [Amestoy et al.](https://gitlab.com/mgerest/mixedblr) [2] and SuiteSparse collection [4], and the low-precision arithmetic is simulated by chop [3]._
 
 References
 ------------

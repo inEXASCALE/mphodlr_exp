@@ -34,4 +34,4 @@ LU factorization, IMA J. Numer. Anal., 43 (2022), pp. 2198–2227, https://doi.o
 
 [3] N. J. Higham and S. Pranesh, Simulating low precision floating-point arithmetic, SIAM J. Sci. Comput., 41 (2019), pp. C585–C602, https://doi.org/10.1137/19M1251308.
 
-[4] T. A. Davis and Y. Hu, The university of Florida sparse matrix collection, ACM Trans. Math. Software, 38 (2011), https://doi.org/10.1145/2049662.2049663.
+[4] T. A. Davis and Y. Hu, The University of Florida Sparse Matrix Collection, ACM Trans. Math. Software, 38 (2011), https://doi.org/10.1145/2049662.2049663.

@@ -26,7 +26,7 @@ References
 ------------
 
 
-[1] Carson, Erin, Xinye Chen and Xiaobo Liu. Mixed precision HODLR matrices. (2024).
+[1] Carson, Erin, Xinye Chen and Xiaobo Liu, Mixed precision HODLR matrices, arXiv:2407.21637, (2024).
 
 [2] P. Amestoy, O. Boiteau, A. Buttari, M. Gerest, F. J´ez´equel, J.-Y. L’Excellent, and
 T. Mary, Mixed precision low-rank approximations and their application to block lowrank

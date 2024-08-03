@@ -154,30 +154,6 @@ exportgraphics(gca, 'figures/storage_psmigr_1.pdf')
 hold off
 
 
-%% ============================================
-load("results/storage_eff7.mat");
-load("results/storage_eff_ap7.mat");
-
-fontSize = 19;
-
-set(gcf, 'Position',  [10 10 400 500])
-set(groot,'defaultAxesTickLabelInterpreter','latex');  
-ste = storage_eff./storage_eff_ap;
-ba = bar(ste(2, :))
-ba.FaceColor = 'flat';
-ba.CData(1,:) = [.5 0 .5];
-ba.CData(2,:) = [.5 1 .5];
-ba.CData(3,:) = [.5 .5 1];
-
-grid on;
-ylim([0,2])
-xticklabels(split(['$\varepsilon$=10^{-7}', ' $\varepsilon$=10^{-4}', ' $\varepsilon$=10^{-1}']))
-
-a = get(gca,'XTickLabel');  
-set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
-%legend(split(num2str(vareps,'%.e ')),'location','northeastoutside', BackgroundAlpha=.3)
-exportgraphics(gca, 'figures/storage_breasttissue_10NN.pdf')
-hold off
 
 
 %% ============================================

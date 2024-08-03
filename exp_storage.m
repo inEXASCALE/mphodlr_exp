@@ -20,7 +20,6 @@ n = size(vareps, 2);
 storage_eff = zeros(m, n);
 storage_eff_ap = zeros(m, n);
 
-
 for i=1:m
     d = depths(i);
     for j=1:n

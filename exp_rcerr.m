@@ -25,10 +25,9 @@ for j = 1:n_d
     d = depths(j);
     for i = 1:n_eps
         eps = vareps(i);
-
+        
         hA = hodlr(A, d, 2, 'svd', eps);
         rA = recover(hA);
-        
         aphA = amphodlr(u_chain, A, d, 2, 'svd', eps); 
         aprA = recover(aphA);
     
@@ -54,7 +53,7 @@ clear all
 A = load('data/3-5000/ex37.mat');
 A =  A.Problem.A;
 disp(size(A));
-u1 = precision('d')
+u1 = precision('d');
 u2 = precision('s');
 u3 = precision('h');
 u4 = precision('b');
@@ -85,7 +84,7 @@ for j = 1:n_d
     
         err_list(i, j) = norm(rA - A, 'fro') / norm(A, 'fro');
         err_list_amp(i, j) = norm(aprA - A, 'fro') / norm(A, 'fro');
-        err_bound_list(i, j) = err_bound(aphA.bottom_level, eps);
+        err_bound_list(i, j) = glob_err_bound(aphA.bottom_level, eps);
     
         disp([err_list(i, j), err_list_amp(i, j), err_bound_list(i, j)]);
         disp(aphA.precIndex); 
@@ -137,7 +136,7 @@ for j = 1:n_d
     
         err_list(i, j) = norm(rA - A, 'fro') / norm(A, 'fro');
         err_list_amp(i, j) = norm(aprA - A, 'fro') / norm(A, 'fro');
-        err_bound_list(i, j) = err_bound(aphA.bottom_level, eps);
+        err_bound_list(i, j) = glob_err_bound(aphA.bottom_level, eps);
     
         disp([err_list(i, j), err_list_amp(i, j), err_bound_list(i, j)]);
         disp(aphA.precIndex); 

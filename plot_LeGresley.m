@@ -30,7 +30,7 @@ h = heatmap(pA,'CellLabelColor','none');
 h.ColorbarVisible = 'off';
 h.GridVisible = 'off';
 h.Colormap = spring;
-set(gcf, 'Position',  [10 10 700 600])
+set(gcf, 'Position',  [10 10 700 600]);
 Ax = gca;
 Ax.XDisplayLabels = nan(size(Ax.XDisplayData));
 Ax.YDisplayLabels = nan(size(Ax.YDisplayData));
@@ -41,7 +41,7 @@ h = heatmap(nA,'CellLabelColor','none');
 h.FontSize = 17;
 h.Colormap = cool(4);
 h.GridVisible = 'off';
-set(gcf, 'Position',  [10 10 700 600])
+set(gcf, 'Position',  [10 10 700 600]);
 Ax = gca;
 Ax.XDisplayLabels = nan(size(Ax.XDisplayData));
 Ax.YDisplayLabels = nan(size(Ax.YDisplayData));

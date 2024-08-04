@@ -3,7 +3,7 @@
 Instructions
 ------------
 
-The software (`@hodlr`, `@mphodlr` and `@ampholdr`) can be downloaded from [Here](https://github.com/chenxinye/mhodlr).
+The software (`@hodlr`, `@mphodlr` and `@ampholdr`) can be downloaded from [Here](https://github.com/chenxinye/mhodlr/mhodlr).
 
 Experimental code for “Mixed precision HODLR matrices” [1]
 

@@ -6,7 +6,6 @@ Download
 
 Note that ``mphodlr_exp`` contains large files storage, to download the full repo, please use the following commands:
 
-GIT_LFS_SKIP_SMUDGE=1 git clone git@something.something.git
 ```
 $ GIT_LFS_SKIP_SMUDGE=1 git clone  https://github.com/inEXASCALE/mphodlr_exp.git
 $ cd mphodlr_exp

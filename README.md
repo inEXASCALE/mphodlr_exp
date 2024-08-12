@@ -19,6 +19,7 @@ The software (`@hodlr` and `@ampholdr`) can be downloaded from [here](https://gi
 Instruction
 ------------
 
+Detailed guidance is referred to [index](https://raw.githubusercontent.com/inEXASCALE/mphodlr_exp/main/SMindex.html)
 
 * The scripts ``plot_saylr3.m`` and ``plot_LeGresley.m`` are used to generate FIG. 4.1.
 

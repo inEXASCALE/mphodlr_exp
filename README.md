@@ -1,11 +1,24 @@
-# mphodlr_exp
+# mphodlr_exp: Experimental code for “Mixed precision HODLR matrices”
 
-Instructions
+
+Download
 ------------
+
+Note that ``mphodlr_exp`` contains large files storage, to download the full repo, please use the following commands:
+
+GIT_LFS_SKIP_SMUDGE=1 git clone git@something.something.git
+```
+$ GIT_LFS_SKIP_SMUDGE=1 git clone  https://github.com/inEXASCALE/mphodlr_exp.git
+$ cd mphodlr_exp
+$ git lfs pull
+```
 
 The software (`@hodlr` and `@ampholdr`) can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
 
-Experimental code for “Mixed precision HODLR matrices” [1]
+
+Instruction
+------------
+
 
 * The scripts ``plot_saylr3.m`` and ``plot_LeGresley.m`` are used to generate FIG. 4.1.
 

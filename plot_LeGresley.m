@@ -1,10 +1,7 @@
 function plot_LeGresley()
     clear all
     A = load('data/LeGresley_2508.mat');
-    %LeGresley_2508.mat
-    %LeGresley_4908.mat
     A =  A.Problem.A;
-    %% 'data/LeGresley_2508.mat'
     %% mix precision
     u1 = precision('d');
     u2 = precision('s');
@@ -22,9 +19,10 @@ function plot_LeGresley()
     %disp(aphA);
     %disp(epsilon);
     
-    norm(aprA - A, 'fro') / norm(A, 'fro')
-    bound_err = (2 * sqrt(2 * aphA.bottom_level) + 1) * epsilon 
-    
+    %disp(norm(aprA - A, 'fro') / norm(A, 'fro'));
+    bound_err = (2 * sqrt(2 * aphA.bottom_level) + 1) * epsilon;
+    % disp(bound_err);
+
     pA = compute_hmat_prec(aphA);
     h = heatmap(pA,'CellLabelColor','none');
     
@@ -33,8 +31,8 @@ function plot_LeGresley()
     h.Colormap = spring;
     set(gcf, 'Position',  [10 10 700 600]);
     Ax = gca;
-    Ax.X%displayLabels = nan(size(Ax.X%displayData));
-    Ax.Y%displayLabels = nan(size(Ax.Y%displayData));
+    Ax.XDisplayLabels = nan(size(Ax.XDisplayData));
+    Ax.YDisplayLabels = nan(size(Ax.YDisplayData));
     exportgraphics(gca,'figures/precsLeGres.pdf')
     
     nA = compute_hmat_norm(aphA);
@@ -44,8 +42,8 @@ function plot_LeGresley()
     h.GridVisible = 'off';
     set(gcf, 'Position',  [10 10 700 600]);
     Ax = gca;
-    Ax.X%displayLabels = nan(size(Ax.X%displayData));
-    Ax.Y%displayLabels = nan(size(Ax.Y%displayData));
+    Ax.XDisplayLabels = nan(size(Ax.XDisplayData));
+    Ax.YDisplayLabels = nan(size(Ax.YDisplayData));
     exportgraphics(gca, 'figures/normLeGres.pdf')
     
     % gca = plot_hmat_nprec(aphA);

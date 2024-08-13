@@ -31,10 +31,10 @@ Detailed guidance is referred to [index](https://raw.githubusercontent.com/inEXA
 
 * The script ``exp_storage.m`` and ``plot_exp_storage.m`` are used to generate results for FIG. 5.4 (run in order).
 
-One can perform all experiments simply by use ``run_all``.
-The results and figures are separately stored in ``results`` and ``figures``, respectively. 
 
 _All data are stored in folder ``data``, which are from [Amestoy et al.](https://gitlab.com/mgerest/mixedblr) [2] and SuiteSparse collection [4], and the low-precision arithmetic is simulated by chop [3]._
+One can perform all experiments simply by use ``run_all``.
+The results and figures are separately stored in ``results`` and ``figures``, respectively. 
 
 References
 ------------

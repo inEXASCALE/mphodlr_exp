@@ -13,7 +13,7 @@ $ cd mphodlr_exp
 $ git lfs pull
 ```
 
-The software (`@hodlr` and `@ampholdr`) can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
+The software (`@precision`. `@hodlr` and `@ampholdr`) can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
 
 
 Instruction

@@ -12,7 +12,9 @@ function run_all()
     exp_storage();
     
     waitbar(0.8,'Gnerating the plots');
-    plot_saylr3(); plot_LeGresley();
+    plot_saylr3(); 
+    figure
+    plot_LeGresley();
 
     plot_exp_rcerr(); 
     

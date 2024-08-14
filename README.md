@@ -5,7 +5,7 @@ Download
 ------------
 ``mphodlr_exp`` requires Git Large File Storage, please ensure ``git lfs`` is properly set up, see [here](https://git-lfs.com/) for reference.  
 
-Note that ``mphodlr_exp`` contains large files storage, to download the full repo, please use the following commands:
+Note that ``mphodlr_exp`` contains large files storage, to download the full repository, please use the following commands:
 
 ```
 $ GIT_LFS_SKIP_SMUDGE=1 git clone  https://github.com/inEXASCALE/mphodlr_exp.git

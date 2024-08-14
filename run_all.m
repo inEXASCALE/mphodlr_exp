@@ -1,29 +1,25 @@
 function run_all()
-    f = waitbar(0, 'Running the first experiment');
-    exp_rcerr();
+    f = waitbar(0, 'Running the experiment, please wait...');
     
-    waitbar(0.2, 'Running the second experiment');
-    exp_mvprod();
-    
-    waitbar(0.4, 'Running the third experiment');
-    exp_lu();
-    
-    waitbar(0.6, 'Running the fourth experiment');
-    exp_storage();
-    
-    waitbar(0.8,'Gnerating the plots');
+    waitbar(.16, f, 'Plotting the norm distributions.');
     plot_saylr3(); 
-    figure
     plot_LeGresley();
 
-    plot_exp_rcerr(); 
-    
+    waitbar(.33, f, 'Testing the reconstruction error.');
+    exp_rcerr();
+    plot_exp_rcerr();
+
+    waitbar(.50, f,'Testing the matrix--vector product.');
+    exp_mvprod();
     plot_exp_mvprod(); 
-    
+
+    waitbar(.66, f, 'Testing the LU decomposition.');
+    exp_lu();
     plot_exp_lu();
 
+    waitbar(.83, f, 'Testing the storage savings.');
+    exp_storage();
     plot_exp_storage();
 
-    waitbar(1, f, 'Finish');
-    close(f);
+    waitbar(1, f, 'Finished, results stored in <results> and <figures>.');
 end

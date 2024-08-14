@@ -1,8 +1,5 @@
 function plot_exp_rcerr()
     clear all 
-    delete(gca)
-    delete(gcf)
-    
     vareps = [10e-9, 10e-08, 10e-07, 10e-06, 10e-5, 10e-04, 10e-03, 10e-02]; % u2.u, u3.u
     depths = [2,  5,  8];
     
@@ -19,6 +16,7 @@ function plot_exp_rcerr()
     lineWidth = 2;
     markerSize = 15;
     
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 1), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
@@ -42,7 +40,7 @@ function plot_exp_rcerr()
     exportgraphics(gca, 'figures/P64_depth1.pdf')
     hold off
     
-    
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 2), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
@@ -66,6 +64,7 @@ function plot_exp_rcerr()
     exportgraphics(gca, 'figures/P64_depth2.pdf')
     hold off
     
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 3), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
@@ -88,9 +87,8 @@ function plot_exp_rcerr()
     grid on;
     exportgraphics(gca, 'figures/P64_depth3.pdf')
     hold off
-    delete(gcf)
-    delete(gca)
-    
+    % delete(gcf)
+    % delete(gca)
     
     % ex37
     load("results/rcerr_err_list2.mat");
@@ -103,6 +101,7 @@ function plot_exp_rcerr()
     lineWidth = 2;
     markerSize = 15;
     
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 1), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
@@ -124,7 +123,7 @@ function plot_exp_rcerr()
     exportgraphics(gca, 'figures/ex37_depth1.pdf')
     hold off
     
-    
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 2), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
@@ -146,7 +145,7 @@ function plot_exp_rcerr()
     exportgraphics(gca, 'figures/ex37_depth2.pdf')
     hold off
     
-    
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 3), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
@@ -167,12 +166,8 @@ function plot_exp_rcerr()
     grid on;
     exportgraphics(gca, 'figures/ex37_depth3.pdf')
     hold off
-    delete(gcf)
-    delete(gca)
-    
-    
-    
-    
+    % delete(gcf)
+    % delete(gca)
     
     % 1138_bus
     load("results/rcerr_err_list3.mat");
@@ -184,6 +179,7 @@ function plot_exp_rcerr()
     lineWidth = 2;
     markerSize = 15;
     
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 1), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
@@ -205,6 +201,7 @@ function plot_exp_rcerr()
     exportgraphics(gca, 'figures/1138_bus_depth1.pdf')
     hold off
     
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 2), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
@@ -226,6 +223,7 @@ function plot_exp_rcerr()
     exportgraphics(gca, 'figures/1138_bus_depth2.pdf')
     hold off
     
+    figure()
     set(gcf, 'Position',  [10 10 800 600])
     semilogy(1:n_eps, err_list(:, 3), '-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 

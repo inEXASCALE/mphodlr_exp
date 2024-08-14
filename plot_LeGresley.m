@@ -22,7 +22,8 @@ function plot_LeGresley()
     %disp(norm(aprA - A, 'fro') / norm(A, 'fro'));
     bound_err = (2 * sqrt(2 * aphA.bottom_level) + 1) * epsilon;
     % disp(bound_err);
-
+    
+    figure()
     pA = compute_hmat_prec(aphA);
     h = heatmap(pA,'CellLabelColor','none');
     
@@ -74,5 +75,6 @@ function plot_LeGresley()
     % th = text(linesF, columnsF, string(valuesF), ...
     %    'VerticalAlignment', 'middle','HorizontalAlignment','Center');
     fontsize(9,"points");
+    hold off
     exportgraphics(gca, 'figures/pnormLeGres.pdf');
 end

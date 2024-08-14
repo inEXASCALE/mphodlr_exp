@@ -1,10 +1,11 @@
 function exp_storage()
     clear all
+    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
+    depths = [2, 8];
+
     %% P64_cs128
     %disp('------------P64_cs128------------')
-    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
-    depths = [5, 8];
-    
+  
     A = load('data/3-5000/root_P64_cs128.mat');
     A =  A.A;
     
@@ -45,9 +46,7 @@ function exp_storage()
     
     %% LeGresley_2508
     %disp('------------LeGresley_2508------------')
-    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
-    depths = [5, 8];
-    
+
     A = load('data/LeGresley_2508.mat');
     A =  A.Problem.A;
     
@@ -88,9 +87,7 @@ function exp_storage()
     
     %% ex37
     %disp('------------ex37------------')
-    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
-    depths = [5, 8];
-    
+
     A = load('data/3-5000/ex37.mat');
     A =  A.Problem.A;
     
@@ -134,9 +131,7 @@ function exp_storage()
     
     %% 1138_bus
     %disp('------------1138_bus------------')
-    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
-    depths = [5, 8];
-    
+
     A = load('data/1138_bus.mat');
     A =  A.Problem.A;
     
@@ -180,8 +175,6 @@ function exp_storage()
     
     %% cavity18
     %disp('------------cavity18------------')
-    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
-    depths = [5, 8];
     
     A = load('data/3-5000/cavity18.mat');
     A =  A.Problem.A;
@@ -223,8 +216,6 @@ function exp_storage()
     
     %% psmigr_1
     %disp('------------psmigr_1------------')
-    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
-    depths = [5, 8];
     
     A = load('data/3-5000/psmigr_1.mat');
     A =  A.Problem.A;
@@ -267,9 +258,7 @@ function exp_storage()
     
     %% saylr3
     %disp('------------saylr3------------')
-    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
-    depths = [5, 8];
-    
+  
     A = load('data/saylr3.mat');
     A =  A.Problem.A;
     
@@ -312,10 +301,8 @@ function exp_storage()
     
     %% bcsstk08
     %disp('------------bcsstk08------------')
-    vareps = [1e-7, 1e-4, 1e-1]; % u2.u, u3.u
-    depths = [5, 8];
-    
-    A = load('data/bcsstk08.mat');
+ 
+    A = load('data/3-5000/bcsstk08.mat');
     A =  A.Problem.A;
     
     u1 = precision('d');

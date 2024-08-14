@@ -17,6 +17,7 @@ function plot_exp_lu()
     
     fontSize = 19;
     %% plot 1
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -58,6 +59,7 @@ function plot_exp_lu()
     hold off
     
     %% plot 2
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -99,6 +101,7 @@ function plot_exp_lu()
     hold off
     
     %% plot 3
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -149,6 +152,7 @@ function plot_exp_lu()
     
     fontSize = 19;
     %% plot 1
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -190,6 +194,7 @@ function plot_exp_lu()
     hold off
     
     %% plot 2
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -231,6 +236,7 @@ function plot_exp_lu()
     hold off
     
     %% plot 3
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -281,6 +287,7 @@ function plot_exp_lu()
     
     fontSize = 19;
     %% plot 1
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -322,6 +329,7 @@ function plot_exp_lu()
     hold off
     
     %% plot 2
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -363,6 +371,7 @@ function plot_exp_lu()
     hold off
     
     %% plot 3
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -413,6 +422,7 @@ function plot_exp_lu()
     
     fontSize = 19;
     %% plot 1
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -454,6 +464,7 @@ function plot_exp_lu()
     hold off
     
     %% plot 2
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);
@@ -495,6 +506,7 @@ function plot_exp_lu()
     hold off
     
     %% plot 3
+    figure()
     set(gcf, 'Position',  [10 10 800 650]);
     
     h = gobjects(6, 1);

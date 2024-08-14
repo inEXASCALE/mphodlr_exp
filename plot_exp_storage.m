@@ -6,7 +6,7 @@ function plot_exp_storage()
     load("results/storage_eff_ap1.mat");
     
     fontSize = 19;
-    
+    figure()
     set(gcf, 'Position',  [10 10 400 500])
     set(groot,'defaultAxesTickLabelInterpreter','latex');  
     ste = storage_eff./storage_eff_ap;
@@ -31,7 +31,7 @@ function plot_exp_storage()
     load("results/storage_eff_ap2.mat");
     
     fontSize = 19;
-    
+    figure()
     set(gcf, 'Position',  [10 10 400 500])
     set(groot,'defaultAxesTickLabelInterpreter','latex');  
     ste = storage_eff./storage_eff_ap;
@@ -56,7 +56,7 @@ function plot_exp_storage()
     load("results/storage_eff_ap3.mat");
     
     fontSize = 19;
-    
+    figure()
     set(gcf, 'Position',  [10 10 400 500])
     set(groot,'defaultAxesTickLabelInterpreter','latex');
     ste = storage_eff./storage_eff_ap;
@@ -82,7 +82,7 @@ function plot_exp_storage()
     load("results/storage_eff_ap4.mat");
     
     fontSize = 19;
-    
+    figure()
     set(gcf, 'Position',  [10 10 400 500])
     set(groot,'defaultAxesTickLabelInterpreter','latex');  
     ste = storage_eff./storage_eff_ap;
@@ -108,7 +108,7 @@ function plot_exp_storage()
     load("results/storage_eff_ap5.mat");
     
     fontSize = 19;
-    
+    figure()
     set(gcf, 'Position',  [10 10 400 500])
     set(groot,'defaultAxesTickLabelInterpreter','latex');  
     ste = storage_eff./storage_eff_ap;
@@ -133,7 +133,7 @@ function plot_exp_storage()
     load("results/storage_eff_ap6.mat");
     
     fontSize = 19;
-    
+    figure()
     set(gcf, 'Position',  [10 10 400 500])
     set(groot,'defaultAxesTickLabelInterpreter','latex');  
     ste = storage_eff./storage_eff_ap;
@@ -161,7 +161,7 @@ function plot_exp_storage()
     load("results/storage_eff_ap8.mat");
     
     fontSize = 19;
-    
+    figure()
     set(gcf, 'Position',  [10 10 400 500])
     set(groot,'defaultAxesTickLabelInterpreter','latex');  
     ste = storage_eff./storage_eff_ap;
@@ -188,7 +188,7 @@ function plot_exp_storage()
     load("results/storage_eff_ap9.mat");
     
     fontSize = 19;
-    
+    figure()
     set(gcf, 'Position',  [10 10 400 500])
     set(groot,'defaultAxesTickLabelInterpreter','latex');  
     ste = storage_eff./storage_eff_ap;

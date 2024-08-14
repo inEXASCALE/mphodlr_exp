@@ -16,8 +16,8 @@ function plot_exp_mvprod()
     load("results/prod2_bound.mat");
     
     %% plot 1
+    figure() 
     set(gcf, 'Position',  [10 10 800 650])
-    
     semilogy(1:n_eps, ref_err_back_list(:, 1)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
     semilogy(1:n_eps, err_back_list1(:, 1)./n_sample,'-.r', 'Marker', '*', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -26,7 +26,6 @@ function plot_exp_mvprod()
     hold on 
     semilogy(1:n_eps, err_bound_list(:, 1)./n_sample,':k', 'Marker', '.', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    
     
     h = legend('fp64', ...
                'fp32', ...
@@ -55,6 +54,7 @@ function plot_exp_mvprod()
     hold off
     
     %% plot 2
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 2)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -93,6 +93,7 @@ function plot_exp_mvprod()
     hold off
     
     %% plot 3
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 3)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -139,6 +140,7 @@ function plot_exp_mvprod()
     load("results/prod2_bound.mat");
     
     %% plot 1
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 1)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -177,6 +179,7 @@ function plot_exp_mvprod()
     hold off
     
     %% plot 2
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 2)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -214,6 +217,7 @@ function plot_exp_mvprod()
     hold off
     
     %% plot 3
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 3)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -263,6 +267,7 @@ function plot_exp_mvprod()
     
     
     %% plot 1
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 1)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -300,6 +305,7 @@ function plot_exp_mvprod()
     hold off
     
     %% plot 2
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 2)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -337,6 +343,7 @@ function plot_exp_mvprod()
     hold off
     
     %% plot 3
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 3)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -385,6 +392,7 @@ function plot_exp_mvprod()
     
     
     %% plot 1
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 1)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -422,6 +430,7 @@ function plot_exp_mvprod()
     hold off
     
     %% plot 2
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 2)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
@@ -459,6 +468,7 @@ function plot_exp_mvprod()
     hold off
     
     %% plot 3
+    figure()
     set(gcf, 'Position',  [10 10 800 650])
     
     semilogy(1:n_eps, ref_err_back_list(:, 3)./n_sample,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)

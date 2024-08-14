@@ -3,9 +3,7 @@
 
 Download
 ------------
-``mphodlr_exp`` requires Git Large File Storage, please ensure ``git lfs`` is properly set up, see [here](https://git-lfs.com/) for reference.  
-
-Note that ``mphodlr_exp`` contains large files storage, to download the full repository, please use the following commands:
+``mphodlr_exp`` contains large files storage. To download the full repository, please ensure ``git lfs`` is properly set up (see [here](https://git-lfs.com/) for details) and use the following commands:
 
 ```
 $ GIT_LFS_SKIP_SMUDGE=1 git clone  https://github.com/inEXASCALE/mphodlr_exp.git
@@ -13,34 +11,40 @@ $ cd mphodlr_exp
 $ git lfs pull
 ```
 
-The software (`@precision`, `@hodlr` and `@ampholdr`) can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
-
 
 Instruction
 ------------
 
 Detailed guidance is referred to [index](https://raw.githubusercontent.com/inEXASCALE/mphodlr_exp/main/SMindex.html):
 
-* The scripts ``plot_saylr3.m`` and ``plot_LeGresley.m`` are used to generate FIG. 4.1.
+* The scripts ``plot_saylr3.m`` and ``plot_LeGresley.m`` are used to generate [Fig. 4.1, 1].
 
-* The scripts ``exp_rcerr.m`` and ``plot_exp_rcerr.m`` are used to generate results for FIG. 5.1 (run in order).
+* The scripts ``exp_rcerr.m`` and ``plot_exp_rcerr.m`` are used to generate the results for [Fig. 5.1, 1] (run in order).
 
-* The scripts ``exp_mvprod.m`` and ``plot_exp_mvprod.m`` are used to generate results for FIG. 5.2 (run in order).
+* The scripts ``exp_mvprod.m`` and ``plot_exp_mvprod.m`` are used to generate the results for [Fig. 5.2, 1] (run in order).
 
-* The scripts ``exp_lu.m`` and ``plot_exp_lu.m`` are used to generate results for FIG. 5.3 (run in order).
+* The scripts ``exp_lu.m`` and ``plot_exp_lu.m`` are used to generate the results for [Fig. 5.3, 1] (run in order).
 
-* The scripts ``exp_storage.m`` and ``plot_exp_storage.m`` are used to generate results for FIG. 5.4 (run in order).
+* The scripts ``exp_storage.m`` and ``plot_exp_storage.m`` are used to generate the results for [Fig. 5.4, 1] (run in order).
 
 
-_All data are stored in folder ``data``, which are from [Amestoy et al.](https://gitlab.com/mgerest/mixedblr) [2] and SuiteSparse collection [4], and the low-precision arithmetic is simulated by chop [3]._
-One can perform all experiments simply by running the command ``run_all``.
-The results and figures are separately stored in ``results`` and ``figures``, respectively. 
+_All test matrices stored in the folder ``data`` are from [Amestoy et al.](https://gitlab.com/mgerest/mixedblr) [2] and SuiteSparse collection [4]. The low precision arithmetics are simulated by chop [3]._
+One can perform all experiments at one go by running the command ``run_all``.
+The generated results and figures are separately stored in ``results`` and ``figures``, respectively. 
+
+
+Requirements
+------------
+
+The software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
+MATLAB 2024a or newer is required. 
+
 
 References
 ------------
 
 
-[1] C. Erin, X. Chen and X. Liu, Mixed precision HODLR matrices, arXiv:2407.21637, (2024), https://doi.org/10.48550/arXiv.2407.21637.
+[1] C. Erin, X. Chen and X. Liu, Mixed precision HODLR matrices, arXiv:2407.21637, (2024), https://doi.org/10.48550/arXiv.2407.2163v3.
 
 [2] P. Amestoy, O. Boiteau, A. Buttari, M. Gerest, F. J´ez´equel, J.-Y. L’Excellent, and
 T. Mary, Mixed precision low-rank approximations and their application to block lowrank

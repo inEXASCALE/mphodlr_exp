@@ -1,6 +1,6 @@
 ## mphodlr_exp
 
-This is repository of the fully reproducible experimental code for the paper “Mixed precision HODLR matrices” [1]. 
+This repository contains the fully reproducible experimental code for the paper “Mixed precision HODLR matrices” [1]. 
 
 
 Download

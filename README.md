@@ -1,4 +1,6 @@
-## mphodlr_exp: Experimental code for “Mixed precision HODLR matrices”
+## mphodlr_exp
+
+This is repository of the fully reproducible experimental code for the paper “Mixed precision HODLR matrices” [1]. 
 
 
 Download
@@ -10,6 +12,12 @@ $ GIT_LFS_SKIP_SMUDGE=1 git clone  https://github.com/inEXASCALE/mphodlr_exp.git
 $ cd mphodlr_exp
 $ git lfs pull
 ```
+
+Requirements
+------------
+
+The software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
+MATLAB 2024a or newer is required. 
 
 
 Instruction
@@ -32,12 +40,6 @@ _All test matrices stored in the folder ``data`` are from [Amestoy et al.](https
 One can perform all experiments at one go by running the command ``run_all``.
 The generated results and figures are separately stored in ``results`` and ``figures``, respectively. 
 
-
-Requirements
-------------
-
-The software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
-MATLAB 2024a or newer is required. 
 
 
 References

@@ -13,12 +13,6 @@ cd mphodlr_exp
 git lfs pull
 ```
 
-where in some shells, e.g., Windows PowerShell, the **first line** might need be replaced by 
-```
-set GIT_LFS_SKIP_SMUDGE=1 
-git clone https://github.com/inEXASCALE/mphodlr_exp.git
-```
-
 Requirements
 ------------
 

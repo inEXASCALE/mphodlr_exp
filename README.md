@@ -8,16 +8,22 @@ Download
 ``mphodlr_exp`` contains large files storage. To download the full repository, please ensure ``git lfs`` is properly set up (see [here](https://git-lfs.com/) for details) and use the following commands:
 
 ```
-$ GIT_LFS_SKIP_SMUDGE=1 git clone  https://github.com/inEXASCALE/mphodlr_exp.git
-$ cd mphodlr_exp
-$ git lfs pull
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/inEXASCALE/mphodlr_exp.git
+cd mphodlr_exp
+git lfs pull
+```
+
+where in some shells, e.g., Windows PowerShell, the **first line** might need be replaced by 
+```
+set GIT_LFS_SKIP_SMUDGE=1 
+git clone https://github.com/inEXASCALE/mphodlr_exp.git
 ```
 
 Requirements
 ------------
 
 The software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
-MATLAB 2024a or newer is required. 
+MATLAB 2024a or newer (with Statistics and Machine Learning Toolbox) is required. 
 
 
 Instruction

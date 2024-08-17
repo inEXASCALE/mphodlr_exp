@@ -15,7 +15,7 @@ cd mphodlr_exp
 git lfs pull
 ```
 
-Full repository containning all code and data can also be obtained in (see [here](https://zenodo.org/records/13335429). 
+Full repository containning all code and data can also be obtained in [here](https://zenodo.org/records/13335429). 
 
 
 

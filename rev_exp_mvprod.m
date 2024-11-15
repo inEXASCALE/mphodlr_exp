@@ -1,10 +1,10 @@
 function rev_exp_mvprod()
     
     clear all
-    DIM = 3
+
     %% kernel matrix 2
     rng(0)
-    
+    DIM = 3;
     n_sample = 10;
     x = unifrnd(-1, 1, 2000, DIM);
     y = unifrnd(-1, 1, 2000, DIM);
@@ -70,6 +70,7 @@ function rev_exp_mvprod()
     
     %% kernel matrix 3
     clear all
+    DIM = 3;
     rng(0)
     
     n_sample = 10;
@@ -137,7 +138,7 @@ function rev_exp_mvprod()
     %% kernel matrix 4
     clear all
     rng(0)
-    
+    DIM = 3;
     n_sample = 10;
     x = unifrnd(-1, 1, 2000, DIM);
     y = unifrnd(-1, 1, 2000, DIM);

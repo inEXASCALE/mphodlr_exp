@@ -1,8 +1,9 @@
 function rev_exp_mvprod()
     
     clear all
+    disp('test 1')
     min_block_size = 2^6;
-    n_size = 2^18;
+    n_size = 2^16;
 
 
     %% kernel matrix 2
@@ -11,13 +12,12 @@ function rev_exp_mvprod()
 
 
 
-    n_sample = 1
+    n_sample = 1;
     x = unifrnd(-1, 1, n_size, DIM);
     y = unifrnd(-1, 1, n_size, DIM);
     kernel_mat = kernel2(x, y);
     
     rng(42);
-    v =  unifrnd(-1, 1, n_sample, n_size);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -47,7 +47,7 @@ function rev_exp_mvprod()
             aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = v(k, :)';
+                x = unifrnd(-1, 1, 1, n_size)';;
                 
                 hb1 = mhdot(aphA, x, u2, 'dense');
                 hb2 = mhdot(aphA, x, u4, 'dense');
@@ -76,6 +76,7 @@ function rev_exp_mvprod()
     
     %% kernel matrix 3
     clear all
+    disp('test 2')
     DIM = 3;
     rng(0)
     
@@ -85,7 +86,6 @@ function rev_exp_mvprod()
     kernel_mat = kernel3(x, y);
     
     rng(42);
-    v =  unifrnd(-1, 1, n_sample, n_size);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -114,7 +114,7 @@ function rev_exp_mvprod()
             aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = v(k, :)';
+                x = unifrnd(-1, 1, 1, n_size)';
                 
                 hb1 = mhdot(aphA, x, u2, 'dense');
                 hb2 = mhdot(aphA, x, u4, 'dense');
@@ -143,6 +143,7 @@ function rev_exp_mvprod()
     
     %% kernel matrix 4
     clear all
+    disp("test 3")
     rng(0)
     DIM = 3;
     n_sample = 1
@@ -151,7 +152,6 @@ function rev_exp_mvprod()
     kernel_mat = kernel4(x, y);
     
     rng(42);
-    v =  unifrnd(-1, 1, n_sample, n_size);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -180,7 +180,7 @@ function rev_exp_mvprod()
             aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = v(k, :)';
+                x = unifrnd(-1, 1, 1, n_size)';
                 
                 hb1 = mhdot(aphA, x, u2, 'dense');
                 hb2 = mhdot(aphA, x, u4, 'dense');

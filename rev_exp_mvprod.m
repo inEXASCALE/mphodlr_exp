@@ -1,17 +1,23 @@
 function rev_exp_mvprod()
     
     clear all
+    min_block_size = 2^6;
+    n_size = 2^18;
+
 
     %% kernel matrix 2
     rng(0)
     DIM = 3;
-    n_sample = 10;
-    x = unifrnd(-1, 1, 2000, DIM);
-    y = unifrnd(-1, 1, 2000, DIM);
+
+
+
+    n_sample = 1
+    x = unifrnd(-1, 1, n_size, DIM);
+    y = unifrnd(-1, 1, n_size, DIM);
     kernel_mat = kernel2(x, y);
     
     rng(42);
-    v =  unifrnd(-1, 1, n_sample, 2000);
+    v =  unifrnd(-1, 1, n_sample, n_size);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -38,7 +44,7 @@ function rev_exp_mvprod()
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, kernel_mat, depth, 10, 'svd', eps); 
+            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
                 x = v(k, :)';
@@ -73,13 +79,13 @@ function rev_exp_mvprod()
     DIM = 3;
     rng(0)
     
-    n_sample = 10;
-    x = unifrnd(-1, 1, 2000, DIM);
-    y = unifrnd(-1, 1, 2000, DIM);
+    n_sample = 1
+    x = unifrnd(-1, 1, n_size, DIM);
+    y = unifrnd(-1, 1, n_size, DIM);
     kernel_mat = kernel3(x, y);
     
     rng(42);
-    v =  unifrnd(-1, 1, n_sample, 2000);
+    v =  unifrnd(-1, 1, n_sample, n_size);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -105,7 +111,7 @@ function rev_exp_mvprod()
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, kernel_mat, depth, 10, 'svd', eps); 
+            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
                 x = v(k, :)';
@@ -139,13 +145,13 @@ function rev_exp_mvprod()
     clear all
     rng(0)
     DIM = 3;
-    n_sample = 10;
-    x = unifrnd(-1, 1, 2000, DIM);
-    y = unifrnd(-1, 1, 2000, DIM);
+    n_sample = 1
+    x = unifrnd(-1, 1, n_size, DIM);
+    y = unifrnd(-1, 1, n_size, DIM);
     kernel_mat = kernel4(x, y);
     
     rng(42);
-    v =  unifrnd(-1, 1, n_sample, 2000);
+    v =  unifrnd(-1, 1, n_sample, n_size);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -171,7 +177,7 @@ function rev_exp_mvprod()
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, kernel_mat, depth, 10, 'svd', eps); 
+            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
                 x = v(k, :)';

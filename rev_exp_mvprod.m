@@ -5,12 +5,9 @@ function rev_exp_mvprod()
     min_block_size = 2^6;
     n_size = 2^16;
 
-
     %% kernel matrix 2
     rng(0)
     DIM = 3;
-
-
 
     n_sample = 1;
     x = unifrnd(-1, 1, n_size, DIM);
@@ -76,7 +73,10 @@ function rev_exp_mvprod()
     
     %% kernel matrix 3
     clear all
-    disp('test 2')
+    disp('test 2');
+    min_block_size = 2^6;
+    n_size = 2^16;
+    
     DIM = 3;
     rng(0)
     
@@ -144,6 +144,9 @@ function rev_exp_mvprod()
     %% kernel matrix 4
     clear all
     disp("test 3")
+    min_block_size = 2^6;
+    n_size = 2^16;
+    
     rng(0)
     DIM = 3;
     n_sample = 1

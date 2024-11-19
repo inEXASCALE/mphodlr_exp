@@ -41,7 +41,7 @@ function rev_exp_mvprod()
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
+            aphA = amphodlr(u_chain, double(kernel_mat), depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
                 x = single(unifrnd(-1, 1, 1, n_size)');
@@ -111,7 +111,7 @@ function rev_exp_mvprod()
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
+            aphA = amphodlr(u_chain, double(kernel_mat), depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
                 x = single(unifrnd(-1, 1, 1, n_size)');
@@ -180,7 +180,7 @@ function rev_exp_mvprod()
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
+            aphA = amphodlr(u_chain, double(kernel_mat), depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
                 x = single(unifrnd(-1, 1, 1, n_size)');

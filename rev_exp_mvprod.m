@@ -10,9 +10,9 @@ function rev_exp_mvprod()
     DIM = 3;
 
     n_sample = 1;
-    x = unifrnd(-1, 1, n_size, DIM);
-    y = unifrnd(-1, 1, n_size, DIM);
-    kernel_mat = kernel2(x, y);
+    x = single(unifrnd(-1, 1, n_size, DIM));
+    y = single(unifrnd(-1, 1, n_size, DIM));
+    kernel_mat = single(kernel2(x, y));
     
     rng(42);
     
@@ -44,7 +44,7 @@ function rev_exp_mvprod()
             aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = unifrnd(-1, 1, 1, n_size)';;
+                x = single(unifrnd(-1, 1, 1, n_size)');
                 
                 hb1 = mhdot(aphA, x, u2, 'dense');
                 hb2 = mhdot(aphA, x, u4, 'dense');
@@ -81,9 +81,9 @@ function rev_exp_mvprod()
     rng(0)
     
     n_sample = 1;
-    x = unifrnd(-1, 1, n_size, DIM);
-    y = unifrnd(-1, 1, n_size, DIM);
-    kernel_mat = kernel3(x, y);
+    x = single(unifrnd(-1, 1, n_size, DIM));
+    y = single(unifrnd(-1, 1, n_size, DIM));
+    kernel_mat = single(kernel3(x, y));
     
     rng(42);
     
@@ -114,7 +114,7 @@ function rev_exp_mvprod()
             aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = unifrnd(-1, 1, 1, n_size)';
+                x = single(unifrnd(-1, 1, 1, n_size)');
                 
                 hb1 = mhdot(aphA, x, u2, 'dense');
                 hb2 = mhdot(aphA, x, u4, 'dense');
@@ -150,9 +150,9 @@ function rev_exp_mvprod()
     rng(0)
     DIM = 3;
     n_sample = 1;
-    x = unifrnd(-1, 1, n_size, DIM);
-    y = unifrnd(-1, 1, n_size, DIM);
-    kernel_mat = kernel4(x, y);
+    x = single(unifrnd(-1, 1, n_size, DIM));
+    y = single(unifrnd(-1, 1, n_size, DIM));
+    kernel_mat = single(kernel4(x, y));
     
     rng(42);
     
@@ -183,7 +183,7 @@ function rev_exp_mvprod()
             aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = unifrnd(-1, 1, 1, n_size)';
+                x = single(unifrnd(-1, 1, 1, n_size)');
                 
                 hb1 = mhdot(aphA, x, u2, 'dense');
                 hb2 = mhdot(aphA, x, u4, 'dense');

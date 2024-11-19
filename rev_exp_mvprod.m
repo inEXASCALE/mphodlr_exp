@@ -3,7 +3,7 @@ function rev_exp_mvprod()
     clear all
     disp('test 1')
     min_block_size = 2^6;
-    n_size = 2^16;
+    n_size = 2^14;
 
     %% kernel matrix 2
     rng(0)
@@ -46,9 +46,9 @@ function rev_exp_mvprod()
             for k=1:n_sample
                 x = single(unifrnd(-1, 1, 1, n_size)');
                 
-                hb1 = mhdot(aphA, x, u2, 'dense');
-                hb2 = mhdot(aphA, x, u4, 'dense');
-                rhb = hdot(aphA, x, 'dense');
+                hb1 = mhdot(aphA, double(x), u2, 'dense');
+                hb2 = mhdot(aphA, double(x), u4, 'dense');
+                rhb = hdot(aphA, double(x), 'dense');
                 
                 b = kernel_mat * x;
                 
@@ -75,7 +75,7 @@ function rev_exp_mvprod()
     clear all
     disp('test 2');
     min_block_size = 2^6;
-    n_size = 2^16;
+    n_size = 2^14;
     
     DIM = 3;
     rng(0)
@@ -116,9 +116,9 @@ function rev_exp_mvprod()
             for k=1:n_sample
                 x = single(unifrnd(-1, 1, 1, n_size)');
                 
-                hb1 = mhdot(aphA, x, u2, 'dense');
-                hb2 = mhdot(aphA, x, u4, 'dense');
-                rhb = hdot(aphA, x, 'dense');
+                hb1 = mhdot(aphA, double(x), u2, 'dense');
+                hb2 = mhdot(aphA, double(x), u4, 'dense');
+                rhb = hdot(aphA, double(x), 'dense');
                 
                 b = kernel_mat * x;
                 
@@ -145,7 +145,7 @@ function rev_exp_mvprod()
     clear all
     disp("test 3")
     min_block_size = 2^6;
-    n_size = 2^16;
+    n_size = 2^14;
     
     rng(0)
     DIM = 3;
@@ -185,9 +185,9 @@ function rev_exp_mvprod()
             for k=1:n_sample
                 x = single(unifrnd(-1, 1, 1, n_size)');
                 
-                hb1 = mhdot(aphA, x, u2, 'dense');
-                hb2 = mhdot(aphA, x, u4, 'dense');
-                rhb = hdot(aphA, x, 'dense');
+                hb1 = mhdot(aphA, double(x), u2, 'dense');
+                hb2 = mhdot(aphA, double(x), u4, 'dense');
+                rhb = hdot(aphA, double(x), 'dense');
                 
                 b = kernel_mat * x;
                 

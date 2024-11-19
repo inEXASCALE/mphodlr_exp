@@ -1,15 +1,38 @@
-function rev_exp_mvprod()
+function rev_exp_mvprod(varargin)
     
     clear all
     disp('test 1')
-    min_block_size = 2^6;
-    n_size = 2^14;
-
+    
+    if nargin == 0
+        n_size = 2^14;
+        min_block_size = 2^6;
+        DIM = 3;
+        n_sample = 1;
+    elseif nargin == 1
+        n_size = varargin{1};
+        min_block_size = 2^6;
+        DIM = 3;
+        n_sample = 1;
+    elseif nargin == 2
+        n_size = varargin{1};
+        min_block_size = varargin{2};
+        DIM = 3;
+        n_sample = 1;
+    elseif nargin == 3
+        n_size = varargin{1};
+        min_block_size = varargin{2};
+        DIM = varargin{3};
+        n_sample = 1;
+    else
+        n_size = varargin{1};
+        min_block_size = varargin{2};
+        DIM = varargin{3};
+        n_sample = varargin{4};
+    end
+    
     %% kernel matrix 2
     rng(0)
-    DIM = 3;
 
-    n_sample = 1;
     x = single(unifrnd(-1, 1, n_size, DIM));
     y = single(unifrnd(-1, 1, n_size, DIM));
     kernel_mat = single(kernel2(x, y));
@@ -72,15 +95,9 @@ function rev_exp_mvprod()
     
     
     %% kernel matrix 3
-    clear all
     disp('test 2');
-    min_block_size = 2^6;
-    n_size = 2^14;
-    
-    DIM = 3;
     rng(0)
     
-    n_sample = 1;
     x = single(unifrnd(-1, 1, n_size, DIM));
     y = single(unifrnd(-1, 1, n_size, DIM));
     kernel_mat = single(kernel3(x, y));
@@ -142,14 +159,9 @@ function rev_exp_mvprod()
     
     
     %% kernel matrix 4
-    clear all
     disp("test 3")
-    min_block_size = 2^6;
-    n_size = 2^14;
     
     rng(0)
-    DIM = 3;
-    n_sample = 1;
     x = single(unifrnd(-1, 1, n_size, DIM));
     y = single(unifrnd(-1, 1, n_size, DIM));
     kernel_mat = single(kernel4(x, y));

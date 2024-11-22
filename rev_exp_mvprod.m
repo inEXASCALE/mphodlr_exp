@@ -33,9 +33,9 @@ function rev_exp_mvprod(varargin)
     %% kernel matrix 2
     rng(0)
 
-    x = single(unifrnd(-1, 1, n_size, DIM));
-    y = single(unifrnd(-1, 1, n_size, DIM));
-    kernel_mat = single(kernel2(x, y));
+    x = unifrnd(-1, 1, n_size, DIM);
+    y = unifrnd(-1, 1, n_size, DIM);
+    kernel_mat = kernel2(x, y);
     
     rng(42);
     
@@ -64,14 +64,14 @@ function rev_exp_mvprod(varargin)
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, double(kernel_mat), depth, min_block_size, 'svd', eps); 
+            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = single(unifrnd(-1, 1, 1, n_size)');
+                x = unifrnd(-1, 1, 1, n_size)';
                 
-                hb1 = mhdot(aphA, double(x), u2, 'dense');
-                hb2 = mhdot(aphA, double(x), u4, 'dense');
-                rhb = hdot(aphA, double(x), 'dense');
+                hb1 = mhdot(aphA, x, u2, 'dense');
+                hb2 = mhdot(aphA, x, u4, 'dense');
+                rhb = hdot(aphA, x, 'dense');
                 
                 b = kernel_mat * x;
                 
@@ -98,9 +98,9 @@ function rev_exp_mvprod(varargin)
     disp('test 2');
     rng(0)
     
-    x = single(unifrnd(-1, 1, n_size, DIM));
-    y = single(unifrnd(-1, 1, n_size, DIM));
-    kernel_mat = single(kernel3(x, y));
+    x = unifrnd(-1, 1, n_size, DIM);
+    y = unifrnd(-1, 1, n_size, DIM);
+    kernel_mat = kernel3(x, y);
     
     rng(42);
     
@@ -128,14 +128,14 @@ function rev_exp_mvprod(varargin)
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, double(kernel_mat), depth, min_block_size, 'svd', eps); 
+            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = single(unifrnd(-1, 1, 1, n_size)');
+                x = unifrnd(-1, 1, 1, n_size)';
                 
-                hb1 = mhdot(aphA, double(x), u2, 'dense');
-                hb2 = mhdot(aphA, double(x), u4, 'dense');
-                rhb = hdot(aphA, double(x), 'dense');
+                hb1 = mhdot(aphA, x, u2, 'dense');
+                hb2 = mhdot(aphA, x, u4, 'dense');
+                rhb = hdot(aphA, x, 'dense');
                 
                 b = kernel_mat * x;
                 
@@ -162,9 +162,9 @@ function rev_exp_mvprod(varargin)
     disp("test 3")
     
     rng(0)
-    x = single(unifrnd(-1, 1, n_size, DIM));
-    y = single(unifrnd(-1, 1, n_size, DIM));
-    kernel_mat = single(kernel4(x, y));
+    x = unifrnd(-1, 1, n_size, DIM);
+    y = unifrnd(-1, 1, n_size, DIM);
+    kernel_mat = kernel4(x, y);
     
     rng(42);
     
@@ -192,14 +192,14 @@ function rev_exp_mvprod(varargin)
             eps = vareps(i);
             depth = depths(j);
             
-            aphA = amphodlr(u_chain, double(kernel_mat), depth, min_block_size, 'svd', eps); 
+            aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
     
             for k=1:n_sample
-                x = single(unifrnd(-1, 1, 1, n_size)');
+                x = unifrnd(-1, 1, 1, n_size)';
                 
-                hb1 = mhdot(aphA, double(x), u2, 'dense');
-                hb2 = mhdot(aphA, double(x), u4, 'dense');
-                rhb = hdot(aphA, double(x), 'dense');
+                hb1 = mhdot(aphA, x, u2, 'dense');
+                hb2 = mhdot(aphA, x, u4, 'dense');
+                rhb = hdot(aphA, x, 'dense');
                 
                 b = kernel_mat * x;
                 

@@ -37,7 +37,7 @@ function rev_exp_mvprod2(varargin)
     u2 = precision('s');
     u3 = precision('h');
     
-    u_chain = prec_chain(u1, u2, u3, u3, u5);
+    u_chain = prec_chain(u1, u2, u3);
     
     depth = 999;
     sizes = [2^9, 2^10, 2^11, 2^12]
@@ -153,7 +153,7 @@ function rev_exp_mvprod2(varargin)
     u2 = precision('s');
     u3 = precision('h');
     
-    u_chain = prec_chain(u1, u2, u3, u3, u5);
+    u_chain = prec_chain(u1, u2, u3);
     
     depth = 999;
     sizes = [2^9, 2^10, 2^11, 2^12]

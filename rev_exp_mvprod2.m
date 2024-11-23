@@ -40,7 +40,7 @@ function rev_exp_mvprod2(varargin)
     u_chain = prec_chain(u1, u2, u3);
     
     depth = 999;
-    sizes = [2^9, 2^10, 2^11, 2^12];
+    sizes = [2^9, 2^10, 2^11, 2^12, 2^13, 2^14, 2^15, 2^16];
     
     n_size = size(sizes, 2);
     
@@ -98,7 +98,7 @@ function rev_exp_mvprod2(varargin)
     u_chain = prec_chain(u1, u2, u3);
     
     depth = 999;
-    sizes = [2^9, 2^10, 2^11, 2^12];
+    sizes = [2^9, 2^10, 2^11, 2^12, 2^13, 2^14, 2^15, 2^16];
     
     n_size = size(sizes, 2);
     
@@ -156,7 +156,7 @@ function rev_exp_mvprod2(varargin)
     u_chain = prec_chain(u1, u2, u3);
     
     depth = 999;
-    sizes = [2^9, 2^10, 2^11, 2^12];
+    sizes = [2^9, 2^10, 2^11, 2^12, 2^13, 2^14, 2^15, 2^16];
     n_size = size(sizes, 2);
     
     err_back_list1  = zeros(n_size, 1);

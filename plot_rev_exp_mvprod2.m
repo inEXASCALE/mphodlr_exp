@@ -1,6 +1,6 @@
 function plot_rev_exp_mvprod2()
-
-    sizes = [2^9, 2^10, 2^11, 2^12, 2^13, 2^14];
+    margin = 100;
+    sizes = [2^9 2^10 2^11 2^12 2^13 2^14];
     lineWidth = 2;
     markerSize = 15;
     
@@ -17,40 +17,31 @@ function plot_rev_exp_mvprod2()
     figure()
     set(gcf, 'Position',  [10 10 800 650])
     
-    semilogy(1:n_size, ref_err_back_list(:, 1),'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, ref_err_back_list,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_back_list1(:, 1),'-.r', 'Marker', '*', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_back_list1,'-.r', 'Marker', '*', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_back_list2(:, 1),'--g', 'Marker', 's', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_back_list2,'--g', 'Marker', 's', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_bound_list(:, 1),':k', 'Marker', '.', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_bound_list,':k', 'Marker', '.', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
     
     h = legend('fp64', ...
                'fp32', ...
                'f16', ...
                'error bound', ...
-         'NumColumns',4, 'Location', 'Best', 'FontSize', fontSize, BackgroundAlpha=.3);
+         'NumColumns', 4, 'Location', 'Best', 'FontSize', fontSize, BackgroundAlpha=.3);
+    
     legend boxoff
-    rect = [0.5, 0, 0, 0.05];
+    rect = [0.5, 0.05, 0, 0.05];
     set(h, 'Position', rect);
     
-    %[l, s] = title('$\ell$=2');
-    xticklabels(split(num2str(sizes,'%.e ')));
-    %ylim([1e-18, 1e-0+0.5]);
-    %yticks([1e-18, 1e-12, 1e-6, 1e-0]);
+    ylim([0-margin, max(err_bound_list)+margin]);
     
-    %lx = xlabel('$\sizesilon$');
-    %set(lx,'interpreter','latex');
-    %lx.FontSize = fontSize;
-    
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
-    % set(l,'interpreter','latex');
-    % l.FontSize = fontSize+12;
-    grid on;
+    set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel2_d2.pdf')
     hold off
+    
     
     
     
@@ -68,13 +59,13 @@ function plot_rev_exp_mvprod2()
     figure()
     set(gcf, 'Position',  [10 10 800 650])
     
-    semilogy(1:n_size, ref_err_back_list(:, 1),'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, ref_err_back_list,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_back_list1(:, 1),'-.r', 'Marker', '*', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_back_list1,'-.r', 'Marker', '*', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_back_list2(:, 1),'--g', 'Marker', 's', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_back_list2,'--g', 'Marker', 's', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_bound_list(:, 1),':k', 'Marker', '.', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_bound_list,':k', 'Marker', '.', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
     h = legend('fp64', ...
                'fp32', ...
@@ -82,22 +73,13 @@ function plot_rev_exp_mvprod2()
                'error bound', ...
          'NumColumns',4, 'Location', 'Best', 'FontSize', fontSize, BackgroundAlpha=.3);
     legend boxoff
-    rect = [0.5, 0, 0, 0.05];
+    rect = [0.5, 0.05, 0, 0.05];
     set(h, 'Position', rect);
     
-    %[l, s] = title('$\ell$=2');
     xticklabels(split(num2str(sizes,'%.e ')));
-    %ylim([1e-18, 1e-0+0.5]);
-    %yticks([1e-18, 1e-12, 1e-6, 1e-0]);
+    ylim([0-margin, max(err_bound_list)+margin]);
     
-    %lx = xlabel('$\sizesilon$');
-    %set(lx,'interpreter','latex');
-    %lx.FontSize = fontSize;
-    
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
-    % set(l,'interpreter','latex');
-    % l.FontSize = fontSize+12;
+    set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     grid on;
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel3_d2.pdf')
     hold off
@@ -118,13 +100,13 @@ function plot_rev_exp_mvprod2()
     figure()
     set(gcf, 'Position',  [10 10 800 650])
     
-    semilogy(1:n_size, ref_err_back_list(:, 1),'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, ref_err_back_list,'-b', 'Marker', 'o', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_back_list1(:, 1),'-.r', 'Marker', '*', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_back_list1,'-.r', 'Marker', '*', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_back_list2(:, 1),'--g', 'Marker', 's', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_back_list2,'--g', 'Marker', 's', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
-    semilogy(1:n_size, err_bound_list(:, 1),':k', 'Marker', '.', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
+    semilogy(1:n_size, err_bound_list,':k', 'Marker', '.', 'MarkerSize',markerSize, 'Linewidth',lineWidth)
     hold on 
     h = legend('fp64', ...
                'fp32', ...
@@ -132,22 +114,12 @@ function plot_rev_exp_mvprod2()
                'error bound', ...
          'NumColumns',4, 'Location', 'Best', 'FontSize', fontSize, BackgroundAlpha=.3);
     legend boxoff
-    rect = [0.5, 0, 0, 0.05];
+    rect = [0.5, 0.05, 0, 0.05];
     set(h, 'Position', rect);
     
-    %[l, s] = title('$\ell$=2');
-    xticklabels(split(num2str(sizes,'%.e ')));
-    %ylim([1e-18, 1e-0+0.5]);
-    %yticks([1e-18, 1e-12, 1e-6, 1e-0]);
+    ylim([0-margin, max(err_bound_list)+margin]);
     
-    %lx = xlabel('$\sizesilon$');
-    %set(lx,'interpreter','latex');
-    %lx.FontSize = fontSize;
-    
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
-    % set(l,'interpreter','latex');
-    % l.FontSize = fontSize+12;
+    set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     grid on;
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel4_d2.pdf')
     hold off

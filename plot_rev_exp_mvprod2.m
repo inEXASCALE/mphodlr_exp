@@ -49,7 +49,7 @@ function plot_rev_exp_mvprod2()
     % set(l,'interpreter','latex');
     % l.FontSize = fontSize+12;
     grid on;
-    exportgraphics(gca, 'figures/rev_matvecprod_kernel2_d2.pdf')
+    exportgraphics(gca, 'figures/rev2_matvecprod_kernel2_d2.pdf')
     hold off
     
     
@@ -99,7 +99,7 @@ function plot_rev_exp_mvprod2()
     % set(l,'interpreter','latex');
     % l.FontSize = fontSize+12;
     grid on;
-    exportgraphics(gca, 'figures/rev_matvecprod_kernel3_d2.pdf')
+    exportgraphics(gca, 'figures/rev2_matvecprod_kernel3_d2.pdf')
     hold off
     
     
@@ -149,7 +149,7 @@ function plot_rev_exp_mvprod2()
     % set(l,'interpreter','latex');
     % l.FontSize = fontSize+12;
     grid on;
-    exportgraphics(gca, 'figures/rev_matvecprod_kernel4_d2.pdf')
+    exportgraphics(gca, 'figures/rev2_matvecprod_kernel4_d2.pdf')
     hold off
     
    

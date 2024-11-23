@@ -7,30 +7,39 @@ function rev_exp_mvprod2(varargin)
         n_size = 2^14;
         min_block_size = 2^6;
         DIM = 3;
+        eps = 1e-06;
         n_sample = 1;
     elseif nargin == 1
         n_size = varargin{1};
         min_block_size = 2^6;
         DIM = 3;
+        eps = 1e-06;
         n_sample = 1;
     elseif nargin == 2
         n_size = varargin{1};
         min_block_size = varargin{2};
         DIM = 3;
+        eps = 1e-06;
         n_sample = 1;
     elseif nargin == 3
         n_size = varargin{1};
         min_block_size = varargin{2};
         DIM = varargin{3};
+        eps = 1e-06;
+        n_sample = 1;
+    elseif nargin == 4
+        n_size = varargin{1};
+        min_block_size = varargin{2};
+        DIM = varargin{3};
+        eps = varargin{4};
         n_sample = 1;
     else
         n_size = varargin{1};
         min_block_size = varargin{2};
         DIM = varargin{3};
-        n_sample = varargin{4};
+        eps = varargin{4};
+        n_sample = varargin{5};
     end
-
-    eps = 1e-06;
     
     %% kernel matrix 2
     rng(0)
@@ -38,8 +47,10 @@ function rev_exp_mvprod2(varargin)
     u1 = precision('d').builtin();
     u2 = precision('s').builtin();
     u3 = precision('h').builtin();
+    u4 = precision('b');
+    u5 = precision('q52');
     
-    u_chain = prec_chain(u1, u2, u3);
+    u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     depth = 999;
     sizes = [2^9, 2^10, 2^11, 2^12, 2^13, 2^14];
@@ -65,7 +76,7 @@ function rev_exp_mvprod2(varargin)
             x = unifrnd(-1, 1, 1, i_size)';
             
             hb1 = mhdot(aphA, x, u2, 'dense');
-            hb2 = mhdot(aphA, x, u3, 'dense');
+            hb2 = mhdot(aphA, x, u4, 'dense');
             rhb = hdot(aphA, x, 'dense');
             
             b = kernel_mat * x;
@@ -96,8 +107,10 @@ function rev_exp_mvprod2(varargin)
     u1 = precision('d').builtin();
     u2 = precision('s').builtin();
     u3 = precision('h').builtin();
+    u4 = precision('b');
+    u5 = precision('q52');
     
-    u_chain = prec_chain(u1, u2, u3);
+    u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     depth = 999;
     sizes = [2^9, 2^10, 2^11, 2^12, 2^13, 2^14];
@@ -116,13 +129,13 @@ function rev_exp_mvprod2(varargin)
         y = unifrnd(-1, 1, i_size, DIM);
         kernel_mat = kernel3(x, y);
 
-        aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', 1e-06); 
+        aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
 
         for k=1:n_sample
             x = unifrnd(-1, 1, 1, i_size)';
             
             hb1 = mhdot(aphA, x, u2, 'dense');
-            hb2 = mhdot(aphA, x, u3, 'dense');
+            hb2 = mhdot(aphA, x, u4, 'dense');
             rhb = hdot(aphA, x, 'dense');
             
             b = kernel_mat * x;
@@ -154,8 +167,10 @@ function rev_exp_mvprod2(varargin)
     u1 = precision('d').builtin();
     u2 = precision('s').builtin();
     u3 = precision('h').builtin();
+    u4 = precision('b');
+    u5 = precision('q52');
     
-    u_chain = prec_chain(u1, u2, u3);
+    u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     depth = 999;
     sizes = [2^9, 2^10, 2^11, 2^12, 2^13, 2^14];
@@ -173,13 +188,13 @@ function rev_exp_mvprod2(varargin)
         y = unifrnd(-1, 1, i_size, DIM);
         kernel_mat = kernel4(x, y);
         
-        aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', 1e-06); 
+        aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
 
         for k=1:n_sample
             x = unifrnd(-1, 1, 1, i_size)';
             
             hb1 = mhdot(aphA, x, u2, 'dense');
-            hb2 = mhdot(aphA, x, u3, 'dense');
+            hb2 = mhdot(aphA, x, u4, 'dense');
             rhb = hdot(aphA, x, 'dense');
             
             b = kernel_mat * x;

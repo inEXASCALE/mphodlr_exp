@@ -1,5 +1,5 @@
 function plot_rev_exp_mvprod2()
-    margin = 100;
+    margin = 1;
     sizes = [2^9 2^10 2^11 2^12 2^13 2^14];
     lineWidth = 2;
     markerSize = 15;
@@ -36,9 +36,12 @@ function plot_rev_exp_mvprod2()
     rect = [0.5, 0.05, 0, 0.05];
     set(h, 'Position', rect);
     
-    ylim([0-margin, max(err_bound_list)+margin]);
+    ylim([0-margin, max(err_bound_list)]);
     
-    set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
+    set(gca,'XTick',sizes, ...
+        'XTickLabel', {'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'}, ...
+        'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
+    title('kernel 2')
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel2_d2.pdf')
     hold off
     
@@ -77,15 +80,13 @@ function plot_rev_exp_mvprod2()
     set(h, 'Position', rect);
     
     xticklabels(split(num2str(sizes,'%.e ')));
-    ylim([0-margin, max(err_bound_list)+margin]);
+    ylim([0-margin, max(err_bound_list)]);
     
     set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     grid on;
+    title('kernel 3')
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel3_d2.pdf')
     hold off
-    
-    
-    
     
     %% kernel matrix 4
     fontSize = 19;
@@ -93,8 +94,6 @@ function plot_rev_exp_mvprod2()
     load("results/rev_prod4_err_back2.mat");
     load("results/rev_prod4_ref_err_back.mat");
     load("results/rev_prod4_bound.mat");
-    
-    
     
     %% plot 1
     figure()
@@ -117,13 +116,11 @@ function plot_rev_exp_mvprod2()
     rect = [0.5, 0.05, 0, 0.05];
     set(h, 'Position', rect);
     
-    ylim([0-margin, max(err_bound_list)+margin]);
+    ylim([0-margin, max(err_bound_list)]);
     
     set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     grid on;
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel4_d2.pdf')
     hold off
-    
-   
 
 end

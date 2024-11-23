@@ -40,7 +40,7 @@ function rev_exp_mvprod2(varargin)
     u_chain = prec_chain(u1, u2, u3);
     
     depth = 999;
-    sizes = [2^9, 2^10, 2^11, 2^12]
+    sizes = [2^9, 2^10, 2^11, 2^12];
     
     n_size = size(sizes, 2);
     
@@ -60,7 +60,7 @@ function rev_exp_mvprod2(varargin)
         aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', 1e-06); 
 
         for k=1:n_sample
-            x = unifrnd(-1, 1, 1, n_size)';
+            x = unifrnd(-1, 1, 1, i_size)';
             
             hb1 = mhdot(aphA, x, u2, 'dense');
             hb2 = mhdot(aphA, x, u3, 'dense');
@@ -98,7 +98,7 @@ function rev_exp_mvprod2(varargin)
     u_chain = prec_chain(u1, u2, u3);
     
     depth = 999;
-    sizes = [2^9, 2^10, 2^11, 2^12]
+    sizes = [2^9, 2^10, 2^11, 2^12];
     
     n_size = size(sizes, 2);
     
@@ -117,7 +117,7 @@ function rev_exp_mvprod2(varargin)
         aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', 1e-06); 
 
         for k=1:n_sample
-            x = unifrnd(-1, 1, 1, n_size)';
+            x = unifrnd(-1, 1, 1, i_size)';
             
             hb1 = mhdot(aphA, x, u2, 'dense');
             hb2 = mhdot(aphA, x, u3, 'dense');
@@ -156,7 +156,7 @@ function rev_exp_mvprod2(varargin)
     u_chain = prec_chain(u1, u2, u3);
     
     depth = 999;
-    sizes = [2^9, 2^10, 2^11, 2^12]
+    sizes = [2^9, 2^10, 2^11, 2^12];
     n_size = size(sizes, 2);
     
     err_back_list1  = zeros(n_size, 1);
@@ -174,7 +174,7 @@ function rev_exp_mvprod2(varargin)
         aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', 1e-06); 
 
         for k=1:n_sample
-            x = unifrnd(-1, 1, 1, n_size)';
+            x = unifrnd(-1, 1, 1, i_size)';
             
             hb1 = mhdot(aphA, x, u2, 'dense');
             hb2 = mhdot(aphA, x, u3, 'dense');

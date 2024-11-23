@@ -114,7 +114,7 @@ function rev_exp_mvprod2(varargin)
         disp(i_size)
         x = unifrnd(-1, 1, i_size, DIM);
         y = unifrnd(-1, 1, i_size, DIM);
-        kernel_mat = kernel2(x, y);
+        kernel_mat = kernel3(x, y);
 
         aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', 1e-06); 
 
@@ -171,7 +171,7 @@ function rev_exp_mvprod2(varargin)
         disp(i_size)
         x = unifrnd(-1, 1, i_size, DIM);
         y = unifrnd(-1, 1, i_size, DIM);
-        kernel_mat = kernel2(x, y);
+        kernel_mat = kernel4(x, y);
         
         aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', 1e-06); 
 

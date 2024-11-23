@@ -41,7 +41,7 @@ function plot_rev_exp_mvprod2()
     set(gca,'XTick',sizes, ...
         'XTickLabel', {'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'}, ...
         'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
-    title('kernel 2')
+    title('test 1')
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel2_d2.pdf')
     hold off
     
@@ -84,7 +84,7 @@ function plot_rev_exp_mvprod2()
     
     set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     grid on;
-    title('kernel 3')
+    title('test 2')
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel3_d2.pdf')
     hold off
     
@@ -120,6 +120,7 @@ function plot_rev_exp_mvprod2()
     
     set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     grid on;
+    title('test 3')
     exportgraphics(gca, 'figures/rev2_matvecprod_kernel4_d2.pdf')
     hold off
 

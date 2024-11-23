@@ -1,6 +1,4 @@
 function rev_exp_mvprod2(varargin)
-    
-    clear all
     disp('test 1')
     
     if nargin == 0

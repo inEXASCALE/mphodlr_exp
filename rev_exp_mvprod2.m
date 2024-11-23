@@ -94,10 +94,10 @@ function rev_exp_mvprod2(varargin)
 
     end
     
-    save("results/rev_prod2_err_back1.mat", 'err_back_list1');
-    save("results/rev_prod2_err_back2.mat", 'err_back_list2');
-    save("results/rev_prod2_ref_err_back.mat", 'ref_err_back_list');
-    save("results/rev_prod2_bound.mat", 'err_bound_list');
+    save("results/rev2_prod2_err_back1.mat", 'err_back_list1');
+    save("results/rev2_prod2_err_back2.mat", 'err_back_list2');
+    save("results/rev2_prod2_ref_err_back.mat", 'ref_err_back_list');
+    save("results/rev2_prod2_bound.mat", 'err_bound_list');
     
     
     %% kernel matrix 3
@@ -153,10 +153,10 @@ function rev_exp_mvprod2(varargin)
 
     end
     
-    save("results/rev_prod3_err_back1.mat", 'err_back_list1');
-    save("results/rev_prod3_err_back2.mat", 'err_back_list2');
-    save("results/rev_prod3_ref_err_back.mat", 'ref_err_back_list');
-    save("results/rev_prod3_bound.mat", 'err_bound_list');
+    save("results/rev2_prod3_err_back1.mat", 'err_back_list1');
+    save("results/rev2_prod3_err_back2.mat", 'err_back_list2');
+    save("results/rev2_prod3_ref_err_back.mat", 'ref_err_back_list');
+    save("results/rev2_prod3_bound.mat", 'err_bound_list');
     
     
     %% kernel matrix 4
@@ -212,8 +212,8 @@ function rev_exp_mvprod2(varargin)
     
     end
     
-    save("results/rev_prod4_err_back1.mat", 'err_back_list1');
-    save("results/rev_prod4_err_back2.mat", 'err_back_list2');
-    save("results/rev_prod4_ref_err_back.mat", 'ref_err_back_list');
-    save("results/rev_prod4_bound.mat", 'err_bound_list');
+    save("results/rev2_prod4_err_back1.mat", 'err_back_list1');
+    save("results/rev2_prod4_err_back2.mat", 'err_back_list2');
+    save("results/rev2_prod4_ref_err_back.mat", 'ref_err_back_list');
+    save("results/rev2_prod4_bound.mat", 'err_bound_list');
 end

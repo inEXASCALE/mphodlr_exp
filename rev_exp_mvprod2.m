@@ -33,9 +33,9 @@ function rev_exp_mvprod2(varargin)
     %% kernel matrix 2
     rng(0)
     
-    u1 = precision('d');
-    u2 = precision('s');
-    u3 = precision('h');
+    u1 = precision('d').builtin();
+    u2 = precision('s').builtin();
+    u3 = precision('h').builtin();
     
     u_chain = prec_chain(u1, u2, u3);
     
@@ -91,9 +91,9 @@ function rev_exp_mvprod2(varargin)
     disp('test 2');
     rng(0)
     
-    u1 = precision('d');
-    u2 = precision('s');
-    u3 = precision('h');
+    u1 = precision('d').builtin();
+    u2 = precision('s').builtin();
+    u3 = precision('h').builtin();
     
     u_chain = prec_chain(u1, u2, u3);
     
@@ -149,9 +149,9 @@ function rev_exp_mvprod2(varargin)
     
     rng(0)
     
-    u1 = precision('d');
-    u2 = precision('s');
-    u3 = precision('h');
+    u1 = precision('d').builtin();
+    u2 = precision('s').builtin();
+    u3 = precision('h').builtin();
     
     u_chain = prec_chain(u1, u2, u3);
     

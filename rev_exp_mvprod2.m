@@ -52,7 +52,7 @@ function rev_exp_mvprod2(varargin)
     
     for i=1:n_size
         i_size = sizes(i);
-
+        disp(i_size)
         x = unifrnd(-1, 1, i_size, DIM);
         y = unifrnd(-1, 1, i_size, DIM);
         kernel_mat = kernel2(x, y);
@@ -109,7 +109,7 @@ function rev_exp_mvprod2(varargin)
     
     for i=1:n_size
         i_size = sizes(i);
-        
+        disp(i_size)
         x = unifrnd(-1, 1, i_size, DIM);
         y = unifrnd(-1, 1, i_size, DIM);
         kernel_mat = kernel2(x, y);
@@ -166,7 +166,7 @@ function rev_exp_mvprod2(varargin)
     
     for i=1:n_size
         i_size = sizes(i);
-        
+        disp(i_size)
         x = unifrnd(-1, 1, i_size, DIM);
         y = unifrnd(-1, 1, i_size, DIM);
         kernel_mat = kernel2(x, y);

@@ -29,6 +29,8 @@ function rev_exp_mvprod2(varargin)
         DIM = varargin{3};
         n_sample = varargin{4};
     end
+
+    eps = 1e-06;
     
     %% kernel matrix 2
     rng(0)
@@ -57,7 +59,7 @@ function rev_exp_mvprod2(varargin)
         y = unifrnd(-1, 1, i_size, DIM);
         kernel_mat = kernel2(x, y);
         
-        aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', 1e-06); 
+        aphA = amphodlr(u_chain, kernel_mat, depth, min_block_size, 'svd', eps); 
 
         for k=1:n_sample
             x = unifrnd(-1, 1, 1, i_size)';
@@ -71,7 +73,7 @@ function rev_exp_mvprod2(varargin)
             err_back1 = norm(b - hb1, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
             err_back2 = norm(b - hb2, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
             ref_err_back = norm(b - rhb, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
-            err_bound = 2*(sqrt(2)+1)*sqrt(2^(aphA.bottom_level + 1)+2^(aphA.bottom_level-1))*i_size;
+            err_bound = 2*(sqrt(2)+1)*sqrt(2^(aphA.bottom_level + 1)+2^(aphA.bottom_level-1))*eps;
 
             err_back_list1(i) = err_back_list1(i) + err_back1;
             err_back_list2(i) = err_back_list2(i) + err_back2;
@@ -128,7 +130,7 @@ function rev_exp_mvprod2(varargin)
             err_back1 = norm(b - hb1, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
             err_back2 = norm(b - hb2, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
             ref_err_back = norm(b - rhb, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
-            err_bound = 2*(sqrt(2)+1)*sqrt(2^(aphA.bottom_level + 1)+2^(aphA.bottom_level-1))*i_size;
+            err_bound = 2*(sqrt(2)+1)*sqrt(2^(aphA.bottom_level + 1)+2^(aphA.bottom_level-1))*eps;
 
             err_back_list1(i) = err_back_list1(i) + err_back1;
             err_back_list2(i) = err_back_list2(i) + err_back2;
@@ -185,7 +187,7 @@ function rev_exp_mvprod2(varargin)
             err_back1 = norm(b - hb1, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
             err_back2 = norm(b - hb2, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
             ref_err_back = norm(b - rhb, 'fro') / (norm(b, 'fro') * norm(kernel_mat, 'fro'));
-            err_bound = 2*(sqrt(2)+1)*sqrt(2^(aphA.bottom_level + 1)+2^(aphA.bottom_level-1))*i_size;
+            err_bound = 2*(sqrt(2)+1)*sqrt(2^(aphA.bottom_level + 1)+2^(aphA.bottom_level-1))*eps;
 
             err_back_list1(i) = err_back_list1(i) + err_back1;
             err_back_list2(i) = err_back_list2(i) + err_back2;

@@ -6,7 +6,7 @@ function plot_rev_exp_mvprod2()
     
     n_size = size(sizes, 2);
     
-    %% kernel matrix 2
+    %% test1
     fontSize = 19;
     load("results/rev_prod2_err_back1.mat");
     load("results/rev_prod2_err_back2.mat");
@@ -42,7 +42,7 @@ function plot_rev_exp_mvprod2()
         'XTickLabel', {'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'}, ...
         'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     title('test 1')
-    exportgraphics(gca, 'figures/rev2_matvecprod_kernel2_d2.pdf')
+    exportgraphics(gca, 'figures/rev2_matvecprod_test1.pdf')
     hold off
     
     
@@ -58,7 +58,7 @@ function plot_rev_exp_mvprod2()
     load("results/rev_prod3_bound.mat");
     
     
-    %% plot 1
+    %% test2
     figure()
     set(gcf, 'Position',  [10 10 800 650])
     
@@ -85,10 +85,10 @@ function plot_rev_exp_mvprod2()
     set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     grid on;
     title('test 2')
-    exportgraphics(gca, 'figures/rev2_matvecprod_kernel3_d2.pdf')
+    exportgraphics(gca, 'figures/rev2_matvecprod_test2.pdf')
     hold off
     
-    %% kernel matrix 4
+    %% test3
     fontSize = 19;
     load("results/rev_prod4_err_back1.mat");
     load("results/rev_prod4_err_back2.mat");
@@ -121,7 +121,7 @@ function plot_rev_exp_mvprod2()
     set(gca,'XTick',sizes, 'XTickLabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'},'fontsize',fontSize, 'XTick', sizes) % ,'FontWeight','bold'
     grid on;
     title('test 3')
-    exportgraphics(gca, 'figures/rev2_matvecprod_kernel4_d2.pdf')
+    exportgraphics(gca, 'figures/rev2_matvecprod_test3.pdf')
     hold off
 
 end

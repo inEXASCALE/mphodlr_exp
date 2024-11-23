@@ -4,41 +4,30 @@ function rev_exp_mvprod2(varargin)
     disp('test 1')
     
     if nargin == 0
-        n_size = 2^14;
         min_block_size = 2^6;
         DIM = 3;
         eps = 1e-06;
         n_sample = 1;
     elseif nargin == 1
-        n_size = varargin{1};
-        min_block_size = 2^6;
+        min_block_size = varargin{1};
         DIM = 3;
         eps = 1e-06;
         n_sample = 1;
     elseif nargin == 2
-        n_size = varargin{1};
-        min_block_size = varargin{2};
-        DIM = 3;
+        min_block_size = varargin{1};
+        DIM = varargin{2};
         eps = 1e-06;
         n_sample = 1;
     elseif nargin == 3
-        n_size = varargin{1};
-        min_block_size = varargin{2};
-        DIM = varargin{3};
-        eps = 1e-06;
-        n_sample = 1;
-    elseif nargin == 4
-        n_size = varargin{1};
-        min_block_size = varargin{2};
-        DIM = varargin{3};
-        eps = varargin{4};
+        min_block_size = varargin{1};
+        DIM = varargin{2};
+        eps = varargin{3};
         n_sample = 1;
     else
-        n_size = varargin{1};
-        min_block_size = varargin{2};
-        DIM = varargin{3};
-        eps = varargin{4};
-        n_sample = varargin{5};
+        min_block_size = varargin{1};
+        DIM = varargin{2};
+        eps = varargin{3};
+        n_sample = varargin{4};
     end
     
     %% kernel matrix 2

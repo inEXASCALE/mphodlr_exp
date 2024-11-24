@@ -1,8 +1,6 @@
 function rev_exp_mvprod2(sfolder, varargin)
-    disp('test 1')
-
     mkdir(sfolder);
-    
+    disp('test 1')
     if nargin == 1
         min_block_size = 2^6;
         DIM = 3;

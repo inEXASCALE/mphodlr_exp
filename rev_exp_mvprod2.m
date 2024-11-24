@@ -1,22 +1,24 @@
-function rev_exp_mvprod2(varargin)
+function rev_exp_mvprod2(sfolder, varargin)
     disp('test 1')
+
+    mkdir(sfolder);
     
-    if nargin == 0
+    if nargin == 1
         min_block_size = 2^6;
-        DIM = 3;
-        eps = 1e-06;
-        n_sample = 1;
-    elseif nargin == 1
-        min_block_size = varargin{1};
         DIM = 3;
         eps = 1e-06;
         n_sample = 1;
     elseif nargin == 2
         min_block_size = varargin{1};
-        DIM = varargin{2};
+        DIM = 3;
         eps = 1e-06;
         n_sample = 1;
     elseif nargin == 3
+        min_block_size = varargin{1};
+        DIM = varargin{2};
+        eps = 1e-06;
+        n_sample = 1;
+    elseif nargin == 4
         min_block_size = varargin{1};
         DIM = varargin{2};
         eps = varargin{3};
@@ -81,10 +83,10 @@ function rev_exp_mvprod2(varargin)
 
     end
     
-    save("results/rev2_prod2_err_back1.mat", 'err_back_list1');
-    save("results/rev2_prod2_err_back2.mat", 'err_back_list2');
-    save("results/rev2_prod2_ref_err_back.mat", 'ref_err_back_list');
-    save("results/rev2_prod2_bound.mat", 'err_bound_list');
+    save(strcat(sfolder, "/rev2_prod2_err_back1.mat"), 'err_back_list1');
+    save(strcat(sfolder, "/rev2_prod2_err_back2.mat"), 'err_back_list2');
+    save(strcat(sfolder, "/rev2_prod2_ref_err_back.mat"), 'ref_err_back_list');
+    save(strcat(sfolder, "/rev2_prod2_bound.mat"), 'err_bound_list');
     
     
     %% kernel matrix 3
@@ -140,10 +142,10 @@ function rev_exp_mvprod2(varargin)
 
     end
     
-    save("results/rev2_prod3_err_back1.mat", 'err_back_list1');
-    save("results/rev2_prod3_err_back2.mat", 'err_back_list2');
-    save("results/rev2_prod3_ref_err_back.mat", 'ref_err_back_list');
-    save("results/rev2_prod3_bound.mat", 'err_bound_list');
+    save(strcat(sfolder, "/rev2_prod3_err_back1.mat"), 'err_back_list1');
+    save(strcat(sfolder, "/rev2_prod3_err_back2.mat"), 'err_back_list2');
+    save(strcat(sfolder, "/rev2_prod3_ref_err_back.mat"), 'ref_err_back_list');
+    save(strcat(sfolder, "/rev2_prod3_bound.mat"), 'err_bound_list');
     
     
     %% kernel matrix 4
@@ -199,8 +201,8 @@ function rev_exp_mvprod2(varargin)
     
     end
     
-    save("results/rev2_prod4_err_back1.mat", 'err_back_list1');
-    save("results/rev2_prod4_err_back2.mat", 'err_back_list2');
-    save("results/rev2_prod4_ref_err_back.mat", 'ref_err_back_list');
-    save("results/rev2_prod4_bound.mat", 'err_bound_list');
+    save(str(sfolder, "/rev2_prod4_err_back1.mat"), 'err_back_list1');
+    save(str(sfolder, "/rev2_prod4_err_back2.mat"), 'err_back_list2');
+    save(str(sfolder, "/rev2_prod4_ref_err_back.mat"), 'ref_err_back_list');
+    save(str(sfolder, "/rev2_prod4_bound.mat"), 'err_bound_list');
 end

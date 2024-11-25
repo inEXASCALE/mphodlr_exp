@@ -199,8 +199,8 @@ function rev_exp_mvprod2(sfolder, varargin)
     
     end
     
-    save(str(sfolder, "/rev2_prod4_err_back1.mat"), 'err_back_list1');
-    save(str(sfolder, "/rev2_prod4_err_back2.mat"), 'err_back_list2');
-    save(str(sfolder, "/rev2_prod4_ref_err_back.mat"), 'ref_err_back_list');
-    save(str(sfolder, "/rev2_prod4_bound.mat"), 'err_bound_list');
+    save(strcat(sfolder, "/rev2_prod4_err_back1.mat"), 'err_back_list1');
+    save(strcat(sfolder, "/rev2_prod4_err_back2.mat"), 'err_back_list2');
+    save(strcat(sfolder, "/rev2_prod4_ref_err_back.mat"), 'ref_err_back_list');
+    save(strcat(sfolder, "/rev2_prod4_bound.mat"), 'err_bound_list');
 end

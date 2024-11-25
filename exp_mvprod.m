@@ -1,7 +1,6 @@
 function exp_mvprod()
     
     %% kernel matrix 1
-    clear all
     rng(0)
     
     n_sample = 10;

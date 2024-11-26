@@ -7,7 +7,7 @@ function fintplot1()
     n_size = size(sizes, 2);
     
     %% test1
-    fontSize = 19;
+    fontSize = 16;
     load("temp1/rev2_prod2_err_back1.mat");
     load("temp1/rev2_prod2_err_back2.mat");
     load("temp1/rev2_prod2_ref_err_back.mat");
@@ -28,7 +28,7 @@ function fintplot1()
     
     h = legend('fp64', ...
                'fp32', ...
-               'f16', ...
+               'bf16', ...
                'error bound', ...
          'NumColumns', 4, 'Location', 'Best', 'FontSize', fontSize, BackgroundAlpha=.3);
     
@@ -39,11 +39,11 @@ function fintplot1()
     set(gca,'xtick',sizes,'xticklabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'}, 'fontsize',fontSize);
     grid on;
     % title('test 1')
-    exportgraphics(gca, 'figures/rev2_mv1_test1.pdf')
+    exportgraphics(gca, 'figures/fintplot1_1.pdf')
     hold off
     
     %% kernel matrix 3
-    fontSize = 19;
+    fontSize = 16;
     load("temp1/rev2_prod3_err_back1.mat");
     load("temp1/rev2_prod3_err_back2.mat");
     load("temp1/rev2_prod3_ref_err_back.mat");
@@ -64,7 +64,7 @@ function fintplot1()
     hold on 
     h = legend('fp64', ...
                'fp32', ...
-               'f16', ...
+               'bf16', ...
                'error bound', ...
          'NumColumns',4, 'Location', 'Best', 'FontSize', fontSize, BackgroundAlpha=.3);
     legend boxoff
@@ -74,11 +74,11 @@ function fintplot1()
     set(gca,'xtick',sizes,'xticklabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'}, 'fontsize',fontSize);
     grid on;
     % title('test 2')
-    exportgraphics(gca, 'figures/rev2_mv1_test2.pdf')
+    exportgraphics(gca, 'figures/fintplot1_2.pdf')
     hold off
     
     %% test3
-    fontSize = 19;
+    fontSize = 16;
     load("temp1/rev2_prod4_err_back1.mat");
     load("temp1/rev2_prod4_err_back2.mat");
     load("temp1/rev2_prod4_ref_err_back.mat");
@@ -98,7 +98,7 @@ function fintplot1()
     hold on 
     h = legend('fp64', ...
                'fp32', ...
-               'f16', ...
+               'bf16', ...
                'error bound', ...
          'NumColumns',4, 'Location', 'Best', 'FontSize', fontSize, BackgroundAlpha=.3);
     legend boxoff
@@ -108,7 +108,7 @@ function fintplot1()
     set(gca,'xtick',sizes,'xticklabel',{'2^{9}', '2^{10}', '2^{11}', '2^{12}', '2^{13}', '2^{14}'}, 'fontsize',fontSize);
     grid on;
     % title('test 3')
-    exportgraphics(gca, 'figures/rev2_mv1_test3.pdf')
+    exportgraphics(gca, 'figures/fintplot1_3.pdf')
     hold off
 
 end

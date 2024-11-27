@@ -40,7 +40,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -85,7 +85,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -130,7 +130,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -178,7 +178,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -224,7 +224,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -269,7 +269,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -314,7 +314,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -360,7 +360,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     

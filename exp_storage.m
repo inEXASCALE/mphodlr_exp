@@ -7,7 +7,7 @@ function exp_storage()
     %disp('------------P64_cs128------------')
   
     A = load('data/3-5000/root_P64_cs128.mat');
-    A =  A.A;
+    A =  schur_factors(A.A);
     
     u1 = precision('d');
     u2 = precision('s');

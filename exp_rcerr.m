@@ -52,7 +52,8 @@ function exp_rcerr()
     % ex37
     clear all
     A = load('data/3-5000/ex37.mat');
-    A =  schur_factors(A.A);
+    A =  schur_factors(A.Problem.A);
+    
     %disp(size(A));
     u1 = precision('d');
     u2 = precision('s');
@@ -104,7 +105,8 @@ function exp_rcerr()
     % 1138_bus
     clear all
     A = load('data/1138_bus.mat');
-    A =  schur_factors(A.A);
+    A =  schur_factors(A.Problem.A);
+    
     %disp(size(A));
     u1 = precision('d');
     u2 = precision('s');

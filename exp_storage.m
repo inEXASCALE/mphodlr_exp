@@ -48,7 +48,7 @@ function exp_storage()
     %disp('------------LeGresley_2508------------')
 
     A = load('data/LeGresley_2508.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A）;
     
     u1 = precision('d');
     u2 = precision('s');
@@ -89,7 +89,7 @@ function exp_storage()
     %disp('------------ex37------------')
 
     A = load('data/3-5000/ex37.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A）;
     
     u1 = precision('d');
     u2 = precision('s');
@@ -133,7 +133,7 @@ function exp_storage()
     %disp('------------1138_bus------------')
 
     A = load('data/1138_bus.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A);
     
     
     u1 = precision('d');
@@ -177,7 +177,7 @@ function exp_storage()
     %disp('------------cavity18------------')
     
     A = load('data/3-5000/cavity18.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -218,7 +218,7 @@ function exp_storage()
     %disp('------------psmigr_1------------')
     
     A = load('data/3-5000/psmigr_1.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -260,7 +260,7 @@ function exp_storage()
     %disp('------------saylr3------------')
   
     A = load('data/saylr3.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -303,7 +303,7 @@ function exp_storage()
     %disp('------------bcsstk08------------')
  
     A = load('data/3-5000/bcsstk08.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');

@@ -1,6 +1,6 @@
 function plot_exp_rcerr()
     clear all 
-    vareps = [10e-9, 10e-08, 10e-07, 10e-06, 10e-5, 10e-04, 10e-03, 10e-02]; % u2.u, u3.u
+    vareps = [10e-9, 10e-07, 10e-5, 10e-03, 10e-01]; % u2.u, u3.u
     depths = [2,  5,  8];
     
     n_d = size(depths, 2);

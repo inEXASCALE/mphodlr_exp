@@ -2,7 +2,7 @@ function exp_rcerr()
     % P64
     clear all
     A = load('data/3-5000/root_P64_cs128.mat');
-    A =  schur_factors(A.A)
+    A =  schur_factors(A.A);
     %disp(size(A));
     u1 = precision('d');
     u2 = precision('s');
@@ -52,7 +52,7 @@ function exp_rcerr()
     % ex37
     clear all
     A = load('data/3-5000/ex37.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.A);
     %disp(size(A));
     u1 = precision('d');
     u2 = precision('s');
@@ -104,7 +104,7 @@ function exp_rcerr()
     % 1138_bus
     clear all
     A = load('data/1138_bus.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.A);
     %disp(size(A));
     u1 = precision('d');
     u2 = precision('s');

@@ -85,7 +85,7 @@ function exp_lu()
     clear all
     
     A = load('data/3-5000/cavity18.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -167,7 +167,7 @@ function exp_lu()
     clear all
     
     A = load('data/3-5000/ex37.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -247,7 +247,7 @@ function exp_lu()
     clear all
     
     A = load('data/3-5000/psmigr_1.mat');
-    A =  A.Problem.A;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');

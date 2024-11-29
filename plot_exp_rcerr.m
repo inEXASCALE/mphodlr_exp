@@ -1,6 +1,6 @@
 function plot_exp_rcerr()
     clear all 
-    vareps = [10e-9, 10e-07, 10e-5, 10e-03, 10e-01]; % u2.u, u3.u
+    vareps = [1e-9, 1e-7, 1e-5, 1e-3, 1e-1]; % u2.u, u3.u
     depths = [2,  5,  8];
     
     n_d = size(depths, 2);
@@ -24,18 +24,19 @@ function plot_exp_rcerr()
     hold on 
     semilogy(1:n_eps, err_bound_list(:, 1),':k', 'Marker', '.',  'MarkerSize',markerSize, 'Linewidth',lineWidth)
     
-    legend('fp64', ...
-        'adaptive precision', ...
-        'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
-    legend boxoff
     [l, s] = title('$\ell$=2');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
-    ylim([1e-10, 1e-0]);
-    yticks([1e-10, 1e-8, 1e-6, 1e-4, 1e-2, 1e-0]);
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/P64_depth1.pdf')
     hold off
@@ -48,18 +49,24 @@ function plot_exp_rcerr()
     hold on 
     semilogy(1:n_eps, err_bound_list(:, 2),':k', 'Marker', '.',  'MarkerSize',markerSize, 'Linewidth',lineWidth)
     
+    
     legend('fp64', ...
         'adaptive precision', ...
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
     legend boxoff
     [l, s] = title('$\ell$=5');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
-    ylim([1e-10, 1e-0]);
-    yticks([1e-10, 1e-8, 1e-6, 1e-4, 1e-2, 1e-0]);
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/P64_depth2.pdf')
     hold off
@@ -77,13 +84,18 @@ function plot_exp_rcerr()
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
     legend boxoff
     [l, s] = title('$\ell$=8');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
-    ylim([1e-10, 1e-0]);
-    yticks([1e-10, 1e-8, 1e-6, 1e-4, 1e-2, 1e-0]);
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/P64_depth3.pdf')
     hold off
@@ -114,11 +126,18 @@ function plot_exp_rcerr()
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
     legend boxoff
     [l, s] = title('$\ell$=2');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/ex37_depth1.pdf')
     hold off
@@ -136,11 +155,18 @@ function plot_exp_rcerr()
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
     legend boxoff
     [l, s] = title('$\ell$=5');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/ex37_depth2.pdf')
     hold off
@@ -158,11 +184,18 @@ function plot_exp_rcerr()
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
     legend boxoff
     [l, s] = title('$\ell$=8');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/ex37_depth3.pdf')
     hold off
@@ -192,11 +225,18 @@ function plot_exp_rcerr()
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
     legend boxoff
     [l, s] = title('$\ell$=2');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/1138_bus_depth1.pdf')
     hold off
@@ -214,11 +254,18 @@ function plot_exp_rcerr()
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
     legend boxoff
     [l, s] = title('$\ell$=5');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/1138_bus_depth2.pdf')
     hold off
@@ -236,11 +283,18 @@ function plot_exp_rcerr()
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
     legend boxoff
     [l, s] = title('$\ell$=8');
-    xticklabels(split(num2str(vareps,'%.e ')))
-    a = get(gca,'XTickLabel');  
-    set(gca,'XTickLabel',a,'fontsize',fontSize) % ,'FontWeight','bold'
     set(l,'interpreter','latex');
+    set(gca,'XTick',1:n_eps, 'XTickLabel', split(num2str(vareps,'%.e ')), 'fontsize',fontSize) % ,'FontWeight','bold'
+    
     l.FontSize = fontSize+12;
+    ylim([0, max(err_bound_list,[],"all")+10]);
+    yticks([1e-11, 1e-8, 1e-5, 1e-2, 1e+1]);
+
+    legend('fp64', ...
+    'adaptive precision', ...
+    'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    legend boxoff
+    
     grid on;
     exportgraphics(gca, 'figures/1138_bus_depth3.pdf')
     hold off

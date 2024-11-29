@@ -46,8 +46,8 @@ function plot_exp_lu()
     set(l,'interpreter','latex');
     
     xticklabels(split(num2str(vareps,'%.e ')));
-    ylim([1e-14, 1e4]);
-    yticks([ 1e-14, 1e-12, 1e-8, 1e-4, 1e-0, 1e4]);
+    ylim([1e-16, 1e4]);
+    yticks([ 1e-16, 1e-12, 1e-8, 1e-4, 1e-0, 1e4]);
     %extraInputs = {'interpreter','latex','fontsize',fontSize};
     %lx = xlabel('$\varepsilon$', extraInputs{:});
     
@@ -88,8 +88,9 @@ function plot_exp_lu()
     set(l,'interpreter','latex');
     
     xticklabels(split(num2str(vareps,'%.e ')));
-    ylim([1e-14, 1e4]);
-    yticks([ 1e-14, 1e-12, 1e-8, 1e-4, 1e-0, 1e4]);
+    ylim([1e-16, 1e4]);
+    yticks([ 1e-16, 1e-12, 1e-8, 1e-4, 1e-0, 1e4]);
+
     %extraInputs = {'interpreter','latex','fontsize',fontSize};
     %lx = xlabel('$\varepsilon$', extraInputs{:});
     
@@ -130,8 +131,9 @@ function plot_exp_lu()
     set(l,'interpreter','latex');
     
     xticklabels(split(num2str(vareps,'%.e ')));
-    ylim([1e-14, 1e4]);
-    yticks([ 1e-14, 1e-12, 1e-8, 1e-4, 1e-0, 1e4]);
+    ylim([1e-16, 1e4]);
+    yticks([ 1e-16, 1e-12, 1e-8, 1e-4, 1e-0, 1e4]);
+
     %extraInputs = {'interpreter','latex','fontsize',fontSize};
     %lx = xlabel('$\varepsilon$', extraInputs{:});
     

@@ -48,7 +48,7 @@ function exp_storage()
     %disp('------------LeGresley_2508------------')
 
     A = load('data/LeGresley_2508.mat');
-    A =  schur_factors(A.Problem.A）;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');
@@ -89,7 +89,7 @@ function exp_storage()
     %disp('------------ex37------------')
 
     A = load('data/3-5000/ex37.mat');
-    A =  schur_factors(A.Problem.A）;
+    A =  schur_factors(A.Problem.A);
     
     u1 = precision('d');
     u2 = precision('s');

@@ -5,5 +5,5 @@ function SF = schur_factors(M)
     
     SF = zeros(m-m_half, n-n_half);
     A = M(1:m_half, 1:n_half);
-    SF = M(m_half+1:end, n_half+1:end) - M((m_half+1):end, 1:n_half) * inv(A) * M(1:m_half, (n_half+1):end);
+    SF = M(m_half+1:end, n_half+1:end) - M((m_half+1):end, 1:n_half) / A * M(1:m_half, (n_half+1):end);
 end

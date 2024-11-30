@@ -202,7 +202,7 @@ function plot_exp_rcerr()
     % delete(gcf)
     % delete(gca)
     
-    % 1138_bus
+    % saylr3
     load("results/rcerr_err_list3.mat");
     load("results/rcerr_err_list_amp3.mat");
     load("results/rcerr_err_bound_list3.mat");
@@ -238,7 +238,7 @@ function plot_exp_rcerr()
     legend boxoff
     
     grid on;
-    exportgraphics(gca, 'figures/1138_bus_depth1.pdf')
+    exportgraphics(gca, 'figures/saylr3_depth1.pdf')
     hold off
     
     figure()
@@ -267,7 +267,7 @@ function plot_exp_rcerr()
     legend boxoff
     
     grid on;
-    exportgraphics(gca, 'figures/1138_bus_depth2.pdf')
+    exportgraphics(gca, 'figures/saylr3_depth2.pdf')
     hold off
     
     figure()
@@ -281,6 +281,7 @@ function plot_exp_rcerr()
     legend('fp64', ...
         'adaptive precision', ...
         'error bound', 'Position', rect, 'NumColumns',3, 'FontSize', fontSize)
+    
     legend boxoff
     [l, s] = title('$\ell$=8');
     set(l,'interpreter','latex');
@@ -296,7 +297,7 @@ function plot_exp_rcerr()
     legend boxoff
     
     grid on;
-    exportgraphics(gca, 'figures/1138_bus_depth3.pdf')
+    exportgraphics(gca, 'figures/saylr3_depth3.pdf')
     hold off
 
 end

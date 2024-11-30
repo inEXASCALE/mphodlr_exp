@@ -104,7 +104,7 @@ function exp_rcerr()
     
     % 1138_bus
     clear all
-    A = load('data/1138_bus.mat');
+    A = load('data/3-5000/bcsstk08.mat');
     A =  schur_factors(A.Problem.A);
     
     %disp(size(A));

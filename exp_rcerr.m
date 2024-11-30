@@ -102,9 +102,9 @@ function exp_rcerr()
     
     
     
-    % bcsstk08
+    % saylr3
     clear all
-    A = load('data/3-5000/bcsstk08.mat');
+    A = load('data/saylr3.mat');
     A =  schur_factors(A.Problem.A);
     
     %disp(size(A));

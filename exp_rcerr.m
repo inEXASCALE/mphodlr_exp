@@ -12,7 +12,7 @@ function exp_rcerr()
     
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
-    vareps = [1e-9, 1e-7, 1e-5, 1e-3, 1e-1]; % u2.u, u3.u
+    vareps =  [1e-8, 1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1]; % u2.u, u3.u
     depths = [2,  5,  8];
     
     n_d = size(depths, 2);
@@ -63,7 +63,7 @@ function exp_rcerr()
     
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
-    vareps = [1e-9, 1e-7, 1e-5, 1e-3, 1e-1]; % u2.u, u3.u
+    vareps =  [1e-8, 1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1]; % u2.u, u3.u
     depths = [2,  5,  8];
     
     n_d = size(depths, 2);
@@ -116,7 +116,7 @@ function exp_rcerr()
     
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
-    vareps = [1e-9, 1e-7, 1e-5, 1e-3, 1e-1]; % u2.u, u3.u
+    vareps =  [1e-8, 1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1]; % u2.u, u3.u
     depths = [2,  5,  8];
     
     n_d = size(depths, 2);

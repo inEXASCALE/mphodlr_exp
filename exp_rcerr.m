@@ -102,7 +102,7 @@ function exp_rcerr()
     
     
     
-    % 1138_bus
+    % bcsstk08
     clear all
     A = load('data/3-5000/bcsstk08.mat');
     A =  schur_factors(A.Problem.A);

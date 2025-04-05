@@ -20,7 +20,7 @@ Full repository containning all code and data can also be obtained in [here](htt
 Requirements
 ------------
 
-Due to large files storage, the software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [https://github.com/chenxinye/mhodlr/](https://github.com/chenxinye/mhodlr).
+Due to large files storage, the software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [https://github.com/chenxinye/mhodlr](https://github.com/chenxinye/mhodlr).
 MATLAB 2024a or newer (with Statistics and Machine Learning Toolbox) is required. The experimental code was simulated in terms of the version [Commit 706333a](https://github.com/chenxinye/mhodlr/tree/706333a14876153f59ba1b3287ce60689ac7427c). 
 
 

@@ -20,8 +20,9 @@ Full repository containning all code and data can also be obtained in [here](htt
 Requirements
 ------------
 
-The software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [here](https://github.com/chenxinye/mhodlr/tree/main/mhodlr).
+The software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [[here](https://github.com/chenxinye/mhodlr/)]([https://github.com/chenxinye/mhodlr/tree/main/mhodlr](https://github.com/chenxinye/mhodlr/tree/main)).
 MATLAB 2024a or newer (with Statistics and Machine Learning Toolbox) is required. 
+
 
 
 Instruction

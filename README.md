@@ -1,7 +1,7 @@
 # mphodlr_exp
 
 This repository contains the fully reproducible experimental code for 
-the paper “Mixed precision HODLR matrices” [1].  Due to large files storage, the software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [https://github.com/chenxinye/mhodlr](https://github.com/chenxinye/mhodlr). Full repo (old version) can be viewed in 
+the paper “Mixed precision HODLR matrices” [1].  Due to large files storage, the software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [https://github.com/chenxinye/mhodlr](https://github.com/chenxinye/mhodlr). Full repo (old version) for all experiment as well as software can be directly downloaded from 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13335429.svg)](https://doi.org/10.5281/zenodo.13335429)
 
 Download

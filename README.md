@@ -54,7 +54,7 @@ References
 ------------
 
 
-[1] C. Erin, X. Chen and X. Liu, Mixed precision HODLR matrices, arXiv:2407.21637, (2024), https://doi.org/10.48550/arXiv.2407.21637.
+[1] C. Erin, X. Chen and X. Liu, Mixed precision HODLR matrices, SIAM Journal on Scientific Computing, (2024), https://doi.org/10.48550/arXiv.2407.21637.
 
 [2] P. Amestoy, O. Boiteau, A. Buttari, M. Gerest, F. J´ez´equel, J.-Y. L’Excellent, and
 T. Mary, Mixed precision low-rank approximations and their application to block lowrank

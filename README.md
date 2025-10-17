@@ -1,7 +1,8 @@
-# mphodlr_exp [![DOI](https://zenodo.org/badge/DOI/10.1137/24M1683925.svg)](https://doi.org/10.1137/24M1683925)
+# mphodlr_exp 
 
-This repository contains the fully reproducible experimental code for 
-the paper “Mixed precision HODLR matrices” [1]. 
+This repository contains the fully reproducible experimental code for  the paper [1]. 
+
+[![DOI](https://zenodo.org/badge/DOI/10.1137/24M1683925.svg)](https://doi.org/10.1137/24M1683925)
 
 Download
 ------------

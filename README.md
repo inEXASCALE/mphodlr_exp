@@ -2,7 +2,7 @@
 
 This repository contains the fully reproducible experimental code for 
 the paper “Mixed precision HODLR matrices” [1].  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13335429.svg)](https://doi.org/10.5281/zenodo.13335429)
+[![DOI](https://zenodo.org/badge/DOI/10.1137/24M1683925.svg)](https://doi.org/10.1137/24M1683925)
 
 Download
 ------------

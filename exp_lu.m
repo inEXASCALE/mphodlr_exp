@@ -42,13 +42,15 @@ function exp_lu()
             norm_L = norm(recover(L1), 'fro');
             norm_U = norm(recover(U1), 'fro');
             eb1 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
-    
-            [L2, U2] = mhlu(aphA, u2, 'hodlr');
+               
+            set_prec(u2);
+            [L2, U2] = mhlu(aphA, 'hodlr');
             norm_L = norm(recover(L2), 'fro');
             norm_U = norm(recover(U2), 'fro');
             eb2 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
-    
-            [L3, U3] = mhlu(aphA, u4, 'hodlr');
+               
+            set_prec(u4);
+            [L3, U3] = mhlu(aphA, 'hodlr');
             norm_L = norm(recover(L3), 'fro');
             norm_U = norm(recover(U3), 'fro');
             eb3 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
@@ -123,13 +125,15 @@ function exp_lu()
             norm_L = norm(recover(L1), 'fro');
             norm_U = norm(recover(U1), 'fro');
             eb1 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
-    
-            [L2, U2] = mhlu(aphA, u2, 'hodlr');
+                
+            set_prec(u2);
+            [L2, U2] = mhlu(aphA, 'hodlr');
             norm_L = norm(recover(L2), 'fro');
             norm_U = norm(recover(U2), 'fro');
             eb2 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
-    
-            [L3, U3] = mhlu(aphA, u4, 'hodlr');
+            
+            set_prec(u4);
+            [L3, U3] = mhlu(aphA, 'hodlr');
             norm_L = norm(recover(L3), 'fro');
             norm_U = norm(recover(U3), 'fro');
             eb3 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
@@ -205,13 +209,15 @@ function exp_lu()
             norm_L = norm(recover(L1), 'fro');
             norm_U = norm(recover(U1), 'fro');
             eb1 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
-    
-            [L2, U2] = mhlu(aphA, u2, 'hodlr');
+            
+            set_prec(u2);
+            [L2, U2] = mhlu(aphA, 'hodlr');
             norm_L = norm(recover(L2), 'fro');
             norm_U = norm(recover(U2), 'fro');
             eb2 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
-    
-            [L3, U3] = mhlu(aphA, u4, 'hodlr');
+                
+            set_prec(u4);
+            [L3, U3] = mhlu(aphA, 'hodlr');
             norm_L = norm(recover(L3), 'fro');
             norm_U = norm(recover(U3), 'fro');
             eb3 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
@@ -285,13 +291,15 @@ function exp_lu()
             norm_L = norm(recover(L1), 'fro');
             norm_U = norm(recover(U1), 'fro');
             eb1 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
-    
-            [L2, U2] = mhlu(aphA, u2, 'hodlr');
+            
+            set_prec(u2);
+            [L2, U2] = mhlu(aphA, 'hodlr');
             norm_L = norm(recover(L2), 'fro');
             norm_U = norm(recover(U2), 'fro');
             eb2 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;
-    
-            [L3, U3] = mhlu(aphA, u4, 'hodlr');
+            
+            set_prec(u4);
+            [L3, U3] = mhlu(aphA, 'hodlr');
             norm_L = norm(recover(L3), 'fro');
             norm_U = norm(recover(U3), 'fro');
             eb3 = lu_err_bound2(depth, eps, norm_A, norm_L, norm_U)/ norm_A;

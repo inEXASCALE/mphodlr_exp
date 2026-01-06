@@ -33,6 +33,7 @@ function exp_lu()
     
     for i=1:n_eps
         for j=1:n_d
+            disp([i, j])
             eps = vareps(i);
             depth = depths(j);
             

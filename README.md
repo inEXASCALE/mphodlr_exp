@@ -16,7 +16,7 @@ git lfs pull
 
 Due to large files storage, the software `@precision`, `@hodlr`, and `@ampholdr`, which can be downloaded from [https://github.com/chenxinye/mhodlr](https://github.com/chenxinye/mhodlr). Full repo (old version) for all experiment as well as software can be directly downloaded from 
 
-Full repository containning all code and data can also be obtained in [here](https://zenodo.org/records/13335429). 
+Full repository containning all old code and data (the new version of ``mhodlr`` might not be compatible to this experimental code) can also be obtained in [here](https://zenodo.org/records/13335429). 
 
 
 

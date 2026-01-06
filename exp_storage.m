@@ -4,7 +4,7 @@ function exp_storage()
     depths = [2, 8];
 
     %% P64_cs128
-    %disp('------------P64_cs128------------')
+    disp('------------P64_cs128------------')
   
     A = load('data/3-5000/root_P64_cs128.mat');
     A =  schur_factors(A.A);
@@ -23,6 +23,7 @@ function exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=1:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -45,7 +46,7 @@ function exp_storage()
     
     
     %% LeGresley_2508
-    %disp('------------LeGresley_2508------------')
+    disp('------------LeGresley_2508------------')
 
     A = load('data/LeGresley_2508.mat');
     A =  schur_factors(A.Problem.A);
@@ -64,6 +65,7 @@ function exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=1:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -86,7 +88,7 @@ function exp_storage()
     
     
     %% ex37
-    %disp('------------ex37------------')
+    disp('------------ex37------------')
 
     A = load('data/3-5000/ex37.mat');
     A =  schur_factors(A.Problem.A);
@@ -105,6 +107,7 @@ function exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=1:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -130,7 +133,7 @@ function exp_storage()
     
     
     %% 1138_bus
-    %disp('------------1138_bus------------')
+    disp('------------1138_bus------------')
 
     A = load('data/1138_bus.mat');
     A =  schur_factors(A.Problem.A);
@@ -150,6 +153,7 @@ function exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=1:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -174,7 +178,7 @@ function exp_storage()
     
     
     %% cavity18
-    %disp('------------cavity18------------')
+    disp('------------cavity18------------')
     
     A = load('data/3-5000/cavity18.mat');
     A =  schur_factors(A.Problem.A);
@@ -193,6 +197,7 @@ function exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=1:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -215,7 +220,7 @@ function exp_storage()
     
     
     %% psmigr_1
-    %disp('------------psmigr_1------------')
+    disp('------------psmigr_1------------')
     
     A = load('data/3-5000/psmigr_1.mat');
     A =  schur_factors(A.Problem.A);
@@ -234,6 +239,7 @@ function exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=1:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -257,7 +263,7 @@ function exp_storage()
     
     
     %% saylr3
-    %disp('------------saylr3------------')
+    disp('------------saylr3------------')
   
     A = load('data/saylr3.mat');
     A =  schur_factors(A.Problem.A);
@@ -276,6 +282,7 @@ function exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=1:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -300,7 +307,7 @@ function exp_storage()
     
     
     %% bcsstk08
-    %disp('------------bcsstk08------------')
+    disp('------------bcsstk08------------')
  
     A = load('data/3-5000/bcsstk08.mat');
     A =  schur_factors(A.Problem.A);
@@ -319,6 +326,7 @@ function exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=1:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);

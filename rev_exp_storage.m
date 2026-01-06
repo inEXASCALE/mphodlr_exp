@@ -4,7 +4,7 @@ function rev_exp_storage()
     depths = [2, 8];
 
     %% P64_cs128
-    %disp('------------P64_cs128------------')
+    disp('------------P64_cs128------------')
     
     A = load('data/3-5000/root_P64_cs128.mat');
     A =  A.A;
@@ -17,13 +17,13 @@ function rev_exp_storage()
     
     u_chain = prec_chain(u1, u2, u3, u4, u5);
 
-    disp('P64')
     m = size(depths, 2);
     n = size(vareps, 2);
     storage_eff = zeros(m, n);
     storage_eff_ap = zeros(m, n);
     
     for i=2:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -31,8 +31,8 @@ function rev_exp_storage()
             rA = recover(hA);
 
             aphA = amphodlr(u_chain, A, d, 2, 'svd', eps);
-            disp(aphA.normOrder);
-            disp(aphA.precIndex);
+            %disp(aphA.normOrder);
+            %disp(aphA.precIndex);
             
             aprA = recover(aphA);
             %disp(aphA.precIndex)
@@ -40,7 +40,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -49,7 +49,7 @@ function rev_exp_storage()
     
     
     %% LeGresley_2508
-    %disp('------------LeGresley_2508------------')
+    disp('------------LeGresley_2508------------')
 
     A = load('data/LeGresley_2508.mat');
     A =  A.Problem.A;
@@ -60,7 +60,6 @@ function rev_exp_storage()
     u4 = precision('b');
     u5 = precision('q52');
 
-    disp('LeGresley')
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     m = size(depths, 2);
@@ -69,6 +68,7 @@ function rev_exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=2:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -76,8 +76,8 @@ function rev_exp_storage()
             rA = recover(hA);
             
             aphA = amphodlr(u_chain, A, d, 2, 'svd', eps);
-            disp(aphA.normOrder);
-            disp(aphA.precIndex);
+            %disp(aphA.normOrder);
+            %disp(aphA.precIndex);
             
             aprA = recover(aphA);
             %disp(aphA.precIndex)
@@ -85,7 +85,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -94,7 +94,7 @@ function rev_exp_storage()
     
     
     %% ex37
-    %disp('------------ex37------------')
+    disp('------------ex37------------')
 
     A = load('data/3-5000/ex37.mat');
     A =  A.Problem.A;
@@ -105,7 +105,6 @@ function rev_exp_storage()
     u4 = precision('b');
     u5 = precision('q52');
 
-    disp('ex37')
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     m = size(depths, 2);
@@ -114,6 +113,7 @@ function rev_exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=2:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -121,8 +121,8 @@ function rev_exp_storage()
             rA = recover(hA);
             
             aphA = amphodlr(u_chain, A, d, 2, 'svd', eps);
-            disp(aphA.normOrder);
-            disp(aphA.precIndex);
+            %disp(aphA.normOrder);
+            %disp(aphA.precIndex);
 
             aprA = recover(aphA);
             %disp(aphA.precIndex)
@@ -130,7 +130,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -142,7 +142,7 @@ function rev_exp_storage()
     
     
     %% 1138_bus
-    %disp('------------1138_bus------------')
+    disp('------------1138_bus------------')
 
     A = load('data/1138_bus.mat');
     A =  A.Problem.A;
@@ -154,7 +154,6 @@ function rev_exp_storage()
     u4 = precision('b');
     u5 = precision('q52');
 
-    disp('1138bus')
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     m = size(depths, 2);
@@ -163,6 +162,7 @@ function rev_exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=2:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -170,15 +170,15 @@ function rev_exp_storage()
             rA = recover(hA);
             
             aphA = amphodlr(u_chain, A, d, 2, 'svd', eps);
-            disp(aphA.normOrder);
-            disp(aphA.precIndex);
+            %disp(aphA.normOrder);
+            %disp(aphA.precIndex);
             aprA = recover(aphA);
             %disp(aphA.precIndex)
     
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -189,7 +189,7 @@ function rev_exp_storage()
     
     
     %% cavity18
-    %disp('------------cavity18------------')
+    disp('------------cavity18------------')
     
     A = load('data/3-5000/cavity18.mat');
     A =  A.Problem.A;
@@ -200,7 +200,6 @@ function rev_exp_storage()
     u4 = precision('b');
     u5 = precision('q52');
 
-    disp('cavity18')
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     m = size(depths, 2);
@@ -209,6 +208,7 @@ function rev_exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=2:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -216,15 +216,15 @@ function rev_exp_storage()
             rA = recover(hA);
             
             aphA = amphodlr(u_chain, A, d, 2, 'svd', eps);
-            disp(aphA.normOrder);
-            disp(aphA.precIndex);
+            %disp(aphA.normOrder);
+            %disp(aphA.precIndex);
             aprA = recover(aphA);
             %disp(aphA.precIndex)
     
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -233,7 +233,7 @@ function rev_exp_storage()
     
     
     %% psmigr_1
-    %disp('------------psmigr_1------------')
+    disp('------------psmigr_1------------')
     
     A = load('data/3-5000/psmigr_1.mat');
     A =  A.Problem.A;
@@ -244,7 +244,6 @@ function rev_exp_storage()
     u4 = precision('b');
     u5 = precision('q52');
 
-    disp('psmigr')
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     m = size(depths, 2);
@@ -253,6 +252,7 @@ function rev_exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=2:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -260,8 +260,8 @@ function rev_exp_storage()
             rA = recover(hA);
             
             aphA = amphodlr(u_chain, A, d, 2, 'svd', eps);
-            disp(aphA.normOrder);
-            disp(aphA.precIndex);
+            %disp(aphA.normOrder);
+            %disp(aphA.precIndex);
             
             aprA = recover(aphA);
             %disp(aphA.precIndex)
@@ -269,7 +269,7 @@ function rev_exp_storage()
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -279,7 +279,7 @@ function rev_exp_storage()
     
     
     %% saylr3
-    %disp('------------saylr3------------')
+    disp('------------saylr3------------')
    
     A = load('data/saylr3.mat');
     A =  A.Problem.A;
@@ -290,7 +290,6 @@ function rev_exp_storage()
     u4 = precision('b');
     u5 = precision('q52');
 
-    disp('saylr3')
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     m = size(depths, 2);
@@ -299,6 +298,7 @@ function rev_exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=2:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -306,15 +306,15 @@ function rev_exp_storage()
             rA = recover(hA);
             
             aphA = amphodlr(u_chain, A, d, 2, 'svd', eps);
-            disp(aphA.normOrder);
-            disp(aphA.precIndex);
+            %disp(aphA.normOrder);
+            %disp(aphA.precIndex);
             aprA = recover(aphA);
             %disp(aphA.precIndex)
     
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            %disp([storage_eff(i, j), storage_eff_ap(i, j)])
         end
     end
     
@@ -325,7 +325,7 @@ function rev_exp_storage()
     
     
     %% bcsstk08
-    %disp('------------bcsstk08------------')
+    disp('------------bcsstk08------------')
  
     A = load('data/3-5000/bcsstk08.mat');
     A =  A.Problem.A;
@@ -336,7 +336,6 @@ function rev_exp_storage()
     u4 = precision('b');
     u5 = precision('q52');
 
-    disp('bcsstk08')
     u_chain = prec_chain(u1, u2, u3, u4, u5);
     
     m = size(depths, 2);
@@ -345,6 +344,7 @@ function rev_exp_storage()
     storage_eff_ap = zeros(m, n);
     
     for i=2:m
+        disp(i)
         d = depths(i);
         for j=1:n
             eps = vareps(j);
@@ -352,15 +352,15 @@ function rev_exp_storage()
             rA = recover(hA);
             
             aphA = amphodlr(u_chain, A, d, 2, 'svd', eps);
-            disp(aphA.normOrder);
-            disp(aphA.precIndex);
+            %disp(aphA.normOrder);
+            %disp(aphA.precIndex);
             aprA = recover(aphA);
             %disp(aphA.precIndex)
     
             [n1, n2] = size(A);
             storage_eff(i, j) = hstorage(hA) / (n1*n2*64);
             storage_eff_ap(i, j) = hstorage(aphA) / (n1*n2*64);
-            disp([storage_eff(i, j), storage_eff_ap(i, j)])
+            %disp([storage_eff(i, j), storage_eff_ap(i, j)]);
         end
     end
     

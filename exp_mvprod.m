@@ -1,6 +1,7 @@
 function exp_mvprod()
     
     %% kernel matrix 1
+    disp("---kernel 1---")
     rng(0)
     
     n_sample = 10;
@@ -32,6 +33,7 @@ function exp_mvprod()
     
     for i=1:n_eps
         for j=1:n_d
+            disp([i, j])
             eps = vareps(i);
             depth = depths(j);
             
@@ -40,8 +42,12 @@ function exp_mvprod()
             for k=1:n_sample
                 x = v(k, :)';
                 
-                hb1 = mhdot(aphA, x, u2, 'dense');
-                hb2 = mhdot(aphA, x, u4, 'dense');
+                set_prec(u2);
+                hb1 = mhdot(aphA, x, 'dense');
+
+                set_prec(u4);
+                hb2 = mhdot(aphA, x, 'dense');
+
                 rhb = hdot(aphA, x, 'dense');
                 
                 b = kernel_mat * x;
@@ -66,6 +72,7 @@ function exp_mvprod()
     
     
     %% kernel matrix 2
+    disp("---kernel 2---")
     rng(0)
     
     n_sample = 10;
@@ -98,6 +105,7 @@ function exp_mvprod()
     
     for i=1:n_eps
         for j=1:n_d
+            disp([i, j])
             eps = vareps(i);
             depth = depths(j);
             
@@ -106,8 +114,12 @@ function exp_mvprod()
             for k=1:n_sample
                 x = v(k, :)';
                 
+                set_prec(u2);
                 hb1 = mhdot(aphA, x, u2, 'dense');
+
+                set_prec(u4);
                 hb2 = mhdot(aphA, x, u4, 'dense');
+                
                 rhb = hdot(aphA, x, 'dense');
                 
                 b = kernel_mat * x;
@@ -133,6 +145,7 @@ function exp_mvprod()
     
     %% kernel matrix 3
     clear all
+    disp("---kernel 3---")
     rng(0)
     
     n_sample = 10;
@@ -164,6 +177,7 @@ function exp_mvprod()
     
     for i=1:n_eps
         for j=1:n_d
+            disp([i, j])
             eps = vareps(i);
             depth = depths(j);
             
@@ -172,7 +186,10 @@ function exp_mvprod()
             for k=1:n_sample
                 x = v(k, :)';
                 
+                set_prec(u2);
                 hb1 = mhdot(aphA, x, u2, 'dense');
+
+                set_prec(u4);
                 hb2 = mhdot(aphA, x, u4, 'dense');
                 rhb = hdot(aphA, x, 'dense');
                 
@@ -199,6 +216,7 @@ function exp_mvprod()
     
     %% kernel matrix 4
     clear all
+    disp("---kernel 4---")
     rng(0)
     
     n_sample = 10;
@@ -230,6 +248,7 @@ function exp_mvprod()
     
     for i=1:n_eps
         for j=1:n_d
+            disp([i, j])
             eps = vareps(i);
             depth = depths(j);
             
@@ -238,7 +257,10 @@ function exp_mvprod()
             for k=1:n_sample
                 x = v(k, :)';
                 
+                set_prec(u2);
                 hb1 = mhdot(aphA, x, u2, 'dense');
+
+                set_prec(u4);
                 hb2 = mhdot(aphA, x, u4, 'dense');
                 rhb = hdot(aphA, x, 'dense');
                 
